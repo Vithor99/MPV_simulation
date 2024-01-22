@@ -1,0 +1,304 @@
+Starting Dynare (version 5.4).
+Calling Dynare with arguments: -Db_shareRule
+Starting preprocessing of the model file ...
+WARNING: in the 'steady_state_model' block, variable 'Q_hat' is not assigned a value
+WARNING: in the 'steady_state_model' block, variable 'lambda_hat' is not assigned a value
+WARNING: in the 'steady_state_model' block, variable 'R_hat' is not assigned a value
+WARNING: in the 'steady_state_model' block, variable 'pi' is not assigned a value
+WARNING: in the 'steady_state_model' block, variable 'W_hat' is not assigned a value
+WARNING: in the 'steady_state_model' block, variable 'X_hat' is not assigned a value
+WARNING: in the 'steady_state_model' block, variable 'r_u_hat' is not assigned a value
+WARNING: in the 'steady_state_model' block, variable 'r_e_hat' is not assigned a value
+WARNING: in the 'steady_state_model' block, variable 'mu_e_hat' is not assigned a value
+WARNING: in the 'steady_state_model' block, variable 'teta_hat' is not assigned a value
+WARNING: in the 'steady_state_model' block, variable 'U_hat' is not assigned a value
+WARNING: in the 'steady_state_model' block, variable 'l_b_hat' is not assigned a value
+WARNING: in the 'steady_state_model' block, variable 'l_g_hat' is not assigned a value
+WARNING: in the 'steady_state_model' block, variable 'empl_hat' is not assigned a value
+WARNING: in the 'steady_state_model' block, variable 'mu_hat' is not assigned a value
+WARNING: in the 'steady_state_model' block, variable 'z_hat' is not assigned a value
+WARNING: in the 'steady_state_model' block, variable 'phi_0_hat' is not assigned a value
+WARNING: in the 'steady_state_model' block, variable 'mps_hat' is not assigned a value
+WARNING: in the 'steady_state_model' block, variable 'INFL' is not assigned a value
+WARNING: in the 'steady_state_model' block, variable 'EE_hat' is not assigned a value
+WARNING: in the 'steady_state_model' block, variable 'UE_hat' is not assigned a value
+WARNING: in the 'steady_state_model' block, variable 'AC_hat' is not assigned a value
+WARNING: in the 'steady_state_model' block, variable 'C_hat' is not assigned a value
+WARNING: in the 'steady_state_model' block, variable 'v_hat' is not assigned a value
+WARNING: in the 'steady_state_model' block, variable 'varphi_hat' is not assigned a value
+WARNING: in the 'steady_state_model' block, variable 'WplusLam' is not assigned a value
+WARNING: in the 'steady_state_model' block, variable 'b_share' is not assigned a value
+WARNING: in the 'steady_state_model' block, variable 'H_hat' is not assigned a value
+WARNING: in the 'steady_state_model' block, variable 'TFP_hat' is not assigned a value
+WARNING: in the 'steady_state_model' block, variable 'EEf_hat' is not assigned a value
+WARNING: in the 'steady_state_model' block, variable 'UEf_hat' is not assigned a value
+Substitution of endo lags >= 2: added 10 auxiliary variables and equations.
+Found 63 equation(s).
+Evaluating expressions...done
+Computing static model derivatives (order 1).
+Computing dynamic model derivatives (order 1).
+Processing outputs ...
+done
+Preprocessing completed.
+
+
+<a href = "matlab: helpview('optim','eqn_solved','CSHelpWindow');">Equation solved</a>.
+
+fsolve completed because the vector of function values is near zero
+as measured by the value of the <a href = "matlab: helpview('optim','fcn_tolerance_fsolve','CSHelpWindow');">function tolerance</a>, and
+the <a href = "matlab: helpview('optim','appears_regular','CSHelpWindow');">problem appears regular</a> as measured by the gradient.
+
+<<a href = "matlab: createExitMsg({'optim:fsolve:Exit1basic','fsolve'},{'optim:fsolve:Exit1detailed','6.473607e-12','1.000000e-10','2.247331e-23','1.000000e-05'},true,true);;">stopping criteria details</a>>
+
+<a href = "matlab: helpview('optim','eqn_solved','CSHelpWindow');">Equation solved</a>.
+
+fsolve completed because the vector of function values is near zero
+as measured by the value of the <a href = "matlab: helpview('optim','fcn_tolerance_fsolve','CSHelpWindow');">function tolerance</a>, and
+the <a href = "matlab: helpview('optim','appears_regular','CSHelpWindow');">problem appears regular</a> as measured by the gradient.
+
+<<a href = "matlab: createExitMsg({'optim:fsolve:Exit1basic','fsolve'},{'optim:fsolve:Exit1detailed','6.473607e-12','1.000000e-10','2.247331e-23','1.000000e-05'},true,true);;">stopping criteria details</a>>
+[Warning: Some of the parameters have no value (s_g) when using steady. If these parameters are not initialized in a steadystate
+file or a steady_state_model-block, Dynare may not be able to solve the model. Note that simul, perfect_foresight_setup, and
+perfect_foresight_solver do not automatically call the steady state file.] 
+
+STEADY-STATE RESULTS:
+
+Q                  		 1.04144
+lambda             		 0.895367
+R                  		 0.00502513
+X                  		 0.547277
+r_u                		 0.25
+r_e                		 0.0947084
+teta               		 1
+U                  		 0.0499354
+l_b                		 0.182412
+l_g                		 0.767652
+empl               		 0.950065
+mu                 		 1
+phi_0              		 1
+mps                		 1
+z                  		 1
+EE                 		 0.024
+UE                 		 0.25
+AC                 		 0.096
+C                  		 1.03715
+v                  		 1.02176
+varphi             		 0.547277
+VU                 		 13.1826
+Q_hat              		 0
+lambda_hat         		 0
+R_hat              		 0
+pi                 		 0
+W_hat              		 0
+X_hat              		 0
+r_u_hat            		 0
+r_e_hat            		 0
+mu_e_hat           		 0
+teta_hat           		 0
+U_hat              		 0
+l_b_hat            		 0
+l_g_hat            		 0
+empl_hat           		 0
+mu_hat             		 0
+z_hat              		 0
+phi_0_hat          		 0
+mps_hat            		 0
+INFL               		 0
+EE_hat             		 0
+UE_hat             		 0
+AC_hat             		 0
+C_hat              		 0
+v_hat              		 0
+varphi_hat         		 0
+WplusLam           		 0
+b_share            		 0
+H_hat              		 0
+TFP_hat            		 0
+EEf_hat            		 0
+UEf_hat            		 0
+
+
+
+
+Residuals of the static equations:
+
+Equation number 1 : 0 : 1
+Equation number 2 : 0 : 2
+Equation number 3 : 0 : 3
+Equation number 4 : 0 : 4
+Equation number 5 : 0 : mu_e_hat
+Equation number 6 : 0 : 6
+Equation number 7 : 0 : 7
+Equation number 8 : 0 : 8
+Equation number 9 : 0 : 9
+Equation number 10 : 0 : 10
+Equation number 11 : 0 : pi
+Equation number 12 : 0 : 12
+Equation number 13 : 0 : 13
+Equation number 14 : 0 : 14
+Equation number 15 : 0 : 15
+Equation number 16 : 0 : 16
+Equation number 17 : 0 : 17
+Equation number 18 : 0 : 18
+Equation number 19 : 0 : INFL
+Equation number 20 : 0 : EE_hat
+Equation number 21 : 0 : UE_hat
+Equation number 22 : 0 : AC_hat
+Equation number 23 : 0 : C_hat
+Equation number 24 : 0 : v_hat
+Equation number 25 : 0 : varphi_hat
+Equation number 26 : 0 : WplusLam
+Equation number 27 : 0 : b_share
+Equation number 28 : 0 : H_hat
+Equation number 29 : 0 : TFP_hat
+Equation number 30 : 0 : EEf_hat
+Equation number 31 : 0 : UEf_hat
+Equation number 32 : 0 : Q
+Equation number 33 : 0 : lambda
+Equation number 34 : 0 : R
+Equation number 35 : 0 : X
+Equation number 36 : 0 : z
+Equation number 37 : 0 : r_u
+Equation number 38 : 0 : r_e
+Equation number 39 : 0 : mu
+Equation number 40 : 0 : teta
+Equation number 41 : 0 : U
+Equation number 42 : 0 : l_b
+Equation number 43 : 0 : l_g
+Equation number 44 : 0 : phi_0
+Equation number 45 : 0 : mps
+Equation number 46 : 0 : EE
+Equation number 47 : 0 : UE
+Equation number 48 : 0 : AC
+Equation number 49 : 0 : C
+Equation number 50 : 0 : v
+Equation number 51 : 0 : varphi
+Equation number 52 : 0 : empl
+Equation number 53 : 0 : VU
+
+
+
+EIGENVALUES:
+         Modulus             Real        Imaginary
+
+        3.78e-17        -3.78e-17                0
+       7.616e-15       -7.616e-15                0
+          0.4533          -0.4533                0
+          0.4587          -0.3897           0.2421
+          0.4587          -0.3897          -0.2421
+          0.4763          -0.2103           0.4273
+          0.4763          -0.2103          -0.4273
+           0.494            0.494                0
+             0.5              0.5                0
+          0.5109          0.05281           0.5082
+          0.5109          0.05281          -0.5082
+          0.5288           0.5288                0
+          0.5775           0.3591           0.4523
+          0.5775           0.3591          -0.4523
+          0.7563           0.7132           0.2516
+          0.7563           0.7132          -0.2516
+          0.9017           0.9017                0
+            0.93             0.93                0
+            0.94             0.94                0
+           1.097            1.091           0.1162
+           1.097            1.091          -0.1162
+           1.417            1.417                0
+
+
+There are 3 eigenvalue(s) larger than 1 in modulus 
+for 3 forward-looking variable(s)
+
+The rank condition is verified.
+
+[Warning: Some of the parameters have no value (s_g) when using stoch_simul. If these parameters are not initialized in a
+steadystate file or a steady_state_model-block, Dynare may not be able to solve the model. Note that simul,
+perfect_foresight_setup, and perfect_foresight_solver do not automatically call the steady state file.] 
+
+MODEL SUMMARY
+
+  Number of variables:         63
+  Number of stochastic shocks: 4
+  Number of state variables:   19
+  Number of jumpers:           3
+  Number of static variables:  42
+
+
+MATRIX OF COVARIANCE OF EXOGENOUS SHOCKS
+Variables      eps_mu   eps_mps     eps_z  eps_phi0
+eps_mu       0.000529  0.000000  0.000000  0.000000
+eps_mps      0.000000  0.000529  0.000000  0.000000
+eps_z        0.000000  0.000000  0.001347  0.000000
+eps_phi0     0.000000  0.000000  0.000000  0.000000
+
+POLICY AND TRANSITION FUNCTIONS
+                                 mps         EEf_hat          EE_hat           U_hat           C_hat         b_share
+Constant                    1.000000               0               0               0               0               0
+R_hat(-1)                          0      -13.970135      -13.515968        8.640932       -1.153105       -0.309868
+mu_e_hat(-1)                       0        0.307091        0.303163       -0.074737        0.000341       -0.020602
+U_hat(-1)                          0        0.424319        0.449205        0.473460       -0.002888        0.078050
+l_b_hat(-1)                        0        0.167182        0.173541        0.120992       -0.009674        0.921917
+mu_hat(-1)                         0       15.181057       14.682277       -9.489722        0.711483        0.360475
+z_hat(-1)                          0       -1.034396       -0.997045        0.710648        0.023891       -0.039801
+phi_0_hat(-1)                      0        0.481816        0.470016       -0.224505        0.001364       -0.006805
+mps_hat(-1)                 0.930000     -112.395792     -108.757816       69.215678       -5.728740       -2.420596
+pi(-2)                             0      -28.738855      -27.809010       17.691126       -1.384799       -0.617297
+pi(-3)                             0      -27.236588      -26.355254       16.768157       -1.333393       -0.585458
+pi(-4)                             0      -25.337954      -24.517939       15.601498       -1.266469       -0.545177
+pi(-5)                             0      -23.027579      -22.282194       14.181607       -1.182361       -0.496107
+pi(-6)                             0      -20.306039      -19.648582       12.508698       -1.079455       -0.438226
+pi(-7)                             0      -17.197326      -16.640331       10.597310       -0.956244       -0.371995
+pi(-8)                             0      -13.759089      -13.313244        8.482579       -0.811395       -0.298568
+pi(-9)                             0      -10.096732       -9.769343        6.228861       -0.643827       -0.220084
+pi(-10)                            0       -6.382889       -6.175715        3.941651       -0.452810       -0.140066
+pi(-11)                            0       -2.884422       -2.790650        1.784098       -0.238082       -0.063979
+pi(-1)                             0      -29.870622      -28.904235       18.386366       -1.422362       -0.641261
+eps_mu                             0      -16.150060      -15.619443       10.095449       -0.756897       -0.383484
+eps_mps                     1.000000     -120.855690     -116.943888       74.425460       -6.159935       -2.602791
+eps_z                              0        2.093920        2.018309       -1.438559       -0.048362        0.080569
+eps_phi0                           0        0.963631        0.940031       -0.449010        0.002729       -0.013611
+
+
+MOMENTS OF SIMULATED VARIABLES
+VARIABLE              MEAN       STD. DEV.        VARIANCE        SKEWNESS        KURTOSIS
+mps               0.997204        0.058707        0.003447        0.076699       -0.109877
+EEf_hat           0.039749        3.444081       11.861693       -0.061682       -0.022185
+EE_hat            0.034390        3.255407       10.597674       -0.055649       -0.016740
+U_hat            -0.101965        4.877980       23.794687        0.150298       -0.010982
+C_hat             0.006069        0.280731        0.078810       -0.121941       -0.027790
+b_share          -0.012793        0.375883        0.141288        0.170668       -0.019541
+
+
+CORRELATION OF SIMULATED VARIABLES
+VARIABLE        mps  EEf_hat   EE_hat    U_hat    C_hat  b_share
+mps          1.0000  -0.6664  -0.6337   0.9064  -0.8929   0.4931
+EEf_hat     -0.6664   1.0000   0.9987  -0.7530   0.8531   0.1563
+EE_hat      -0.6337   0.9987   1.0000  -0.7178   0.8253   0.1843
+U_hat        0.9064  -0.7530  -0.7178   1.0000  -0.9804   0.2408
+C_hat       -0.8929   0.8531   0.8253  -0.9804   1.0000  -0.1298
+b_share      0.4931   0.1563   0.1843   0.2408  -0.1298   1.0000
+
+
+AUTOCORRELATION OF SIMULATED VARIABLES
+VARIABLE         1       2       3       4       5
+mps         0.9210  0.8486  0.7804  0.7186  0.6601
+EEf_hat     0.5830  0.3535  0.2073  0.1213  0.0590
+EE_hat      0.5552  0.3181  0.1719  0.0899  0.0317
+U_hat       0.9227  0.7925  0.6536  0.5268  0.4187
+C_hat       0.8603  0.7225  0.5901  0.4716  0.3660
+b_share     0.9714  0.9175  0.8537  0.7886  0.7260
+
+
+
+VARIANCE DECOMPOSITION SIMULATING ONE SHOCK AT A TIME (in percent)
+                     eps_mu           eps_mps             eps_z          eps_phi0  Tot. lin. contr.
+mps                    0.00            100.01              0.00              0.00            100.01
+EEf_hat                3.02             96.92              0.06              0.00            100.00
+EE_hat                 2.83             97.10              0.06              0.00             99.99
+U_hat                  5.71             94.36              0.02              0.00            100.10
+C_hat                  3.15             97.00              0.02              0.00            100.17
+b_share                6.58             93.50              0.01              0.00            100.09
+Note: numbers do not add up to 100 due to non-zero correlation of simulated shocks in small samples
+
+Total computing time : 0h00m00s
+Note: 31 warning(s) encountered in the preprocessor
+Note: warning(s) encountered in MATLAB/Octave code
