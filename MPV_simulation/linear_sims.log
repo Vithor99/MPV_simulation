@@ -1,5 +1,5 @@
 Starting Dynare (version 5.4).
-Calling Dynare with arguments: -Db_shareRule
+Calling Dynare with arguments: -DQ_ALTosr -DLoss_Q
 Starting preprocessing of the model file ...
 WARNING: in the 'steady_state_model' block, variable 'Q_hat' is not assigned a value
 WARNING: in the 'steady_state_model' block, variable 'lambda_hat' is not assigned a value
@@ -11,13 +11,14 @@ WARNING: in the 'steady_state_model' block, variable 'r_u_hat' is not assigned a
 WARNING: in the 'steady_state_model' block, variable 'r_e_hat' is not assigned a value
 WARNING: in the 'steady_state_model' block, variable 'mu_e_hat' is not assigned a value
 WARNING: in the 'steady_state_model' block, variable 'teta_hat' is not assigned a value
+WARNING: in the 'steady_state_model' block, variable 'phi_cap_hat' is not assigned a value
 WARNING: in the 'steady_state_model' block, variable 'U_hat' is not assigned a value
 WARNING: in the 'steady_state_model' block, variable 'l_b_hat' is not assigned a value
 WARNING: in the 'steady_state_model' block, variable 'l_g_hat' is not assigned a value
 WARNING: in the 'steady_state_model' block, variable 'empl_hat' is not assigned a value
+WARNING: in the 'steady_state_model' block, variable 'lab_hat' is not assigned a value
 WARNING: in the 'steady_state_model' block, variable 'mu_hat' is not assigned a value
 WARNING: in the 'steady_state_model' block, variable 'z_hat' is not assigned a value
-WARNING: in the 'steady_state_model' block, variable 'phi_0_hat' is not assigned a value
 WARNING: in the 'steady_state_model' block, variable 'mps_hat' is not assigned a value
 WARNING: in the 'steady_state_model' block, variable 'INFL' is not assigned a value
 WARNING: in the 'steady_state_model' block, variable 'EE_hat' is not assigned a value
@@ -28,12 +29,13 @@ WARNING: in the 'steady_state_model' block, variable 'v_hat' is not assigned a v
 WARNING: in the 'steady_state_model' block, variable 'varphi_hat' is not assigned a value
 WARNING: in the 'steady_state_model' block, variable 'WplusLam' is not assigned a value
 WARNING: in the 'steady_state_model' block, variable 'b_share' is not assigned a value
+WARNING: in the 'steady_state_model' block, variable 'g_share' is not assigned a value
 WARNING: in the 'steady_state_model' block, variable 'H_hat' is not assigned a value
 WARNING: in the 'steady_state_model' block, variable 'TFP_hat' is not assigned a value
 WARNING: in the 'steady_state_model' block, variable 'EEf_hat' is not assigned a value
 WARNING: in the 'steady_state_model' block, variable 'UEf_hat' is not assigned a value
 Substitution of endo lags >= 2: added 10 auxiliary variables and equations.
-Found 63 equation(s).
+Found 64 equation(s).
 Evaluating expressions...done
 Computing static model derivatives (order 1).
 Computing dynamic model derivatives (order 1).
@@ -48,7 +50,7 @@ fsolve completed because the vector of function values is near zero
 as measured by the value of the <a href = "matlab: helpview('optim','fcn_tolerance_fsolve','CSHelpWindow');">function tolerance</a>, and
 the <a href = "matlab: helpview('optim','appears_regular','CSHelpWindow');">problem appears regular</a> as measured by the gradient.
 
-<<a href = "matlab: createExitMsg({'optim:fsolve:Exit1basic','fsolve'},{'optim:fsolve:Exit1detailed','6.473607e-12','1.000000e-10','2.247331e-23','1.000000e-05'},true,true);;">stopping criteria details</a>>
+<<a href = "matlab: createExitMsg({'optim:fsolve:Exit1basic','fsolve'},{'optim:fsolve:Exit1detailed','8.851915e-15','1.000000e-10','4.198527e-29','1.000000e-05'},true,true);;">stopping criteria details</a>>
 
 <a href = "matlab: helpview('optim','eqn_solved','CSHelpWindow');">Equation solved</a>.
 
@@ -56,35 +58,1502 @@ fsolve completed because the vector of function values is near zero
 as measured by the value of the <a href = "matlab: helpview('optim','fcn_tolerance_fsolve','CSHelpWindow');">function tolerance</a>, and
 the <a href = "matlab: helpview('optim','appears_regular','CSHelpWindow');">problem appears regular</a> as measured by the gradient.
 
-<<a href = "matlab: createExitMsg({'optim:fsolve:Exit1basic','fsolve'},{'optim:fsolve:Exit1detailed','6.473607e-12','1.000000e-10','2.247331e-23','1.000000e-05'},true,true);;">stopping criteria details</a>>
-[Warning: Some of the parameters have no value (s_g) when using steady. If these parameters are not initialized in a steadystate
-file or a steady_state_model-block, Dynare may not be able to solve the model. Note that simul, perfect_foresight_setup, and
-perfect_foresight_solver do not automatically call the steady state file.] 
+<<a href = "matlab: createExitMsg({'optim:fsolve:Exit1basic','fsolve'},{'optim:fsolve:Exit1detailed','8.851915e-15','1.000000e-10','4.198527e-29','1.000000e-05'},true,true);;">stopping criteria details</a>>
+
+OPTIMAL SIMPLE RULE
+
+
+OSR: Initial value of the objective function: 0.00112123 
+
+
+Number of parameters= 3, initial temperatur= 15.000 
+rt=  0.100; TolFun=  0.000; ns=  10.000;
+nt=  10.000; neps=  10.000; MaxIter=  100000
+Initial step length(vm): 1.000; step_length_c: 0.100
+Name:                 LB;       Start;    UB;   
+phi_pi                -10000000.0000;   1.1700;  10000000.0000;
+phi_q                 -10000000.0000;   0.0000;  10000000.0000;
+phi_alt               -10000000.0000;   0.0000;  10000000.0000;
+
+Intermediate results before next temperature reduction
+current temperature         15
+Min function value so far   0.00055077
+Total moves                 300
+Downhill                    149
+Accepted uphill             146
+Rejected uphill             5
+Trials out of bounds        0
+New minima this temperature 11
+Current optimal x1           3.2251      4.0138
+Current optimal x2           1.5466
+Strength(vm)                2.4196      2.5348      2.5348
+
+
+Intermediate results before next temperature reduction
+current temperature         1.5
+Min function value so far   0.00053451
+Total moves                 300
+Downhill                    132
+Accepted uphill             140
+Rejected uphill             28
+Trials out of bounds        0
+New minima this temperature 5
+Current optimal x1           10.6495      14.3888
+Current optimal x2           -1.0961
+Strength(vm)                5.8543      4.2937       5.997
+
+
+Intermediate results before next temperature reduction
+current temperature         0.15
+Min function value so far   0.00045997
+Total moves                 300
+Downhill                    148
+Accepted uphill             152
+Rejected uphill             0
+Trials out of bounds        0
+New minima this temperature 22
+Current optimal x1           77.19815      104.3823
+Current optimal x2           94.0421
+Strength(vm)                15.1847      11.1368      15.5546
+
+
+Intermediate results before next temperature reduction
+current temperature         0.015
+Min function value so far   0.00045824
+Total moves                 300
+Downhill                    158
+Accepted uphill             142
+Rejected uphill             0
+Trials out of bounds        0
+New minima this temperature 1
+Current optimal x1           106.6059      128.2657
+Current optimal x2           106.5963
+Strength(vm)                39.3851      28.8861      40.3447
+
+
+Intermediate results before next temperature reduction
+current temperature         0.0015
+Min function value so far   0.00042775
+Total moves                 300
+Downhill                    131
+Accepted uphill             155
+Rejected uphill             14
+Trials out of bounds        0
+New minima this temperature 9
+Current optimal x1           212.0585      104.1546
+Current optimal x2           254.6383
+Strength(vm)                93.1295      66.7152      92.9686
+
+
+Intermediate results before next temperature reduction
+current temperature         0.00015
+Min function value so far   0.00042775
+Total moves                 300
+Downhill                    117
+Accepted uphill             148
+Rejected uphill             35
+Trials out of bounds        0
+New minima this temperature 0
+Current optimal x1           212.0585      104.1546
+Current optimal x2           254.6383
+Strength(vm)                186.3271      121.7653      195.3055
+
+
+Intermediate results before next temperature reduction
+current temperature         1.5e-05
+Min function value so far   0.00042084
+Total moves                 300
+Downhill                    84
+Accepted uphill             79
+Rejected uphill             137
+Trials out of bounds        0
+New minima this temperature 8
+Current optimal x1           559.8368      330.3447
+Current optimal x2           680.6421
+Strength(vm)                195.5271      137.6843      199.8366
+
+
+Intermediate results before next temperature reduction
+current temperature         1.5e-06
+Min function value so far   0.00042016
+Total moves                 300
+Downhill                    65
+Accepted uphill             63
+Rejected uphill             172
+Trials out of bounds        0
+New minima this temperature 5
+Current optimal x1           939.3037      552.9508
+Current optimal x2           1141.7473
+Strength(vm)                177.3488      121.9794      173.1169
+
+
+Intermediate results before next temperature reduction
+current temperature         1.5e-07
+Min function value so far   0.00041988
+Total moves                 300
+Downhill                    36
+Accepted uphill             32
+Rejected uphill             232
+Trials out of bounds        0
+New minima this temperature 6
+Current optimal x1           1096.6093      620.99739
+Current optimal x2           1294.4573
+Strength(vm)                132.4906      75.26612       104.333
+
+
+Intermediate results before next temperature reduction
+current temperature         1.5e-08
+Min function value so far   0.00041988
+Total moves                 300
+Downhill                    19
+Accepted uphill             21
+Rejected uphill             260
+Trials out of bounds        0
+New minima this temperature 0
+Current optimal x1           1096.6093      620.99739
+Current optimal x2           1294.4573
+Strength(vm)                62.8906      40.2108      59.8231
+
+
+Intermediate results before next temperature reduction
+current temperature         1.5e-09
+Min function value so far   0.00041987
+Total moves                 300
+Downhill                    15
+Accepted uphill             12
+Rejected uphill             273
+Trials out of bounds        0
+New minima this temperature 6
+Current optimal x1           1102.2086      625.57063
+Current optimal x2           1303.4981
+Strength(vm)                29.8691      20.5177        26.49
+
+
+Intermediate results before next temperature reduction
+current temperature         1.5e-10
+Min function value so far   0.00041986
+Total moves                 300
+Downhill                    21
+Accepted uphill             9
+Rejected uphill             270
+Trials out of bounds        0
+New minima this temperature 19
+Current optimal x1           1117.1042      632.40089
+Current optimal x2           1320.0569
+Strength(vm)                13.8485      9.73934      13.5173
+
+
+Intermediate results before next temperature reduction
+current temperature         1.5e-11
+Min function value so far   0.00041984
+Total moves                 300
+Downhill                    41
+Accepted uphill             1
+Rejected uphill             258
+Trials out of bounds        0
+New minima this temperature 41
+Current optimal x1           1142.2846      646.55119
+Current optimal x2           1349.3694
+Strength(vm)                7.7597      4.9613      7.2302
+
+
+Intermediate results before next temperature reduction
+current temperature         1.5e-12
+Min function value so far   0.00041982
+Total moves                 300
+Downhill                    58
+Accepted uphill             0
+Rejected uphill             242
+Trials out of bounds        0
+New minima this temperature 58
+Current optimal x1           1166.5793      660.38693
+Current optimal x2           1380.7457
+Strength(vm)                4.4566      2.7738      4.7909
+
+
+Intermediate results before next temperature reduction
+current temperature         1.5e-13
+Min function value so far   0.00041979
+Total moves                 300
+Downhill                    77
+Accepted uphill             0
+Rejected uphill             223
+Trials out of bounds        0
+New minima this temperature 77
+Current optimal x1           1202.2119      679.55668
+Current optimal x2           1420.0219
+Strength(vm)                3.4086      1.7941      3.3197
+
+
+Intermediate results before next temperature reduction
+current temperature         1.5e-14
+Min function value so far   0.00041977
+Total moves                 300
+Downhill                    113
+Accepted uphill             0
+Rejected uphill             187
+Trials out of bounds        0
+New minima this temperature 113
+Current optimal x1           1243.3674      701.49981
+Current optimal x2           1466.5552
+Strength(vm)                2.7375        1.44      2.9376
+
+
+Intermediate results before next temperature reduction
+current temperature         1.5e-15
+Min function value so far   0.00041974
+Total moves                 300
+Downhill                    102
+Accepted uphill             0
+Rejected uphill             198
+Trials out of bounds        0
+New minima this temperature 102
+Current optimal x1           1276.9115      722.18369
+Current optimal x2           1509.1221
+Strength(vm)                2.0438      1.2735       2.539
+
+
+Intermediate results before next temperature reduction
+current temperature         1.5e-16
+Min function value so far   0.00041972
+Total moves                 300
+Downhill                    102
+Accepted uphill             0
+Rejected uphill             198
+Trials out of bounds        0
+New minima this temperature 102
+Current optimal x1           1305.3787      737.93465
+Current optimal x2           1541.8435
+Strength(vm)                1.7224      1.0733      1.9882
+
+
+Intermediate results before next temperature reduction
+current temperature         1.5e-17
+Min function value so far   0.0004197
+Total moves                 300
+Downhill                    132
+Accepted uphill             0
+Rejected uphill             168
+Trials out of bounds        0
+New minima this temperature 132
+Current optimal x1           1338.1707      757.23956
+Current optimal x2           1580.0227
+Strength(vm)                1.5994      1.0209      1.8473
+
+
+Intermediate results before next temperature reduction
+current temperature         1.5e-18
+Min function value so far   0.00041969
+Total moves                 300
+Downhill                    108
+Accepted uphill             0
+Rejected uphill             192
+Trials out of bounds        0
+New minima this temperature 108
+Current optimal x1           1362.7581      770.66208
+Current optimal x2           1609.6168
+Strength(vm)                1.4154     0.80038      1.6746
+
+
+Intermediate results before next temperature reduction
+current temperature         1.5e-19
+Min function value so far   0.00041967
+Total moves                 300
+Downhill                    141
+Accepted uphill             0
+Rejected uphill             159
+Trials out of bounds        0
+New minima this temperature 141
+Current optimal x1           1394.9103      787.70346
+Current optimal x2           1646.7136
+Strength(vm)                1.3151     0.76316      1.5939
+
+
+Intermediate results before next temperature reduction
+current temperature         1.5e-20
+Min function value so far   0.00041966
+Total moves                 300
+Downhill                    138
+Accepted uphill             0
+Rejected uphill             162
+Trials out of bounds        0
+New minima this temperature 138
+Current optimal x1           1421.7044      802.88433
+Current optimal x2           1677.2495
+Strength(vm)                1.2233     0.72638      1.5171
+
+
+Intermediate results before next temperature reduction
+current temperature         1.5e-21
+Min function value so far   0.00041965
+Total moves                 300
+Downhill                    128
+Accepted uphill             0
+Rejected uphill             172
+Trials out of bounds        0
+New minima this temperature 128
+Current optimal x1           1445.1028      814.52874
+Current optimal x2           1705.5468
+Strength(vm)                1.1096     0.61145      1.5541
+
+
+Intermediate results before next temperature reduction
+current temperature         1.5e-22
+Min function value so far   0.00041964
+Total moves                 300
+Downhill                    120
+Accepted uphill             0
+Rejected uphill             180
+Trials out of bounds        0
+New minima this temperature 120
+Current optimal x1           1463.9515      827.02983
+Current optimal x2           1727.8054
+Strength(vm)                0.95906     0.58164      1.2785
+
+
+Intermediate results before next temperature reduction
+current temperature         1.5e-23
+Min function value so far   0.00041963
+Total moves                 300
+Downhill                    121
+Accepted uphill             0
+Rejected uphill             179
+Trials out of bounds        0
+New minima this temperature 121
+Current optimal x1           1481.9506      837.18155
+Current optimal x2           1748.2255
+Strength(vm)                0.86938     0.55361       1.159
+
+
+Intermediate results before next temperature reduction
+current temperature         1.5e-24
+Min function value so far   0.00041962
+Total moves                 300
+Downhill                    140
+Accepted uphill             0
+Rejected uphill             160
+Trials out of bounds        0
+New minima this temperature 140
+Current optimal x1           1499.6845      846.97385
+Current optimal x2           1769.9863
+Strength(vm)                0.80872     0.52693      1.1314
+
+
+Intermediate results before next temperature reduction
+current temperature         1.5e-25
+Min function value so far   0.00041961
+Total moves                 300
+Downhill                    123
+Accepted uphill             0
+Rejected uphill             177
+Trials out of bounds        0
+New minima this temperature 123
+Current optimal x1           1517.4401      856.36807
+Current optimal x2           1789.1238
+Strength(vm)                0.75143     0.45519     0.99996
+
+
+Intermediate results before next temperature reduction
+current temperature         1.5e-26
+Min function value so far   0.00041961
+Total moves                 300
+Downhill                    124
+Accepted uphill             0
+Rejected uphill             176
+Trials out of bounds        0
+New minima this temperature 124
+Current optimal x1           1532.3668      864.70094
+Current optimal x2           1807.547
+Strength(vm)                0.68236     0.41262      0.8859
+
+
+Intermediate results before next temperature reduction
+current temperature         1.5e-27
+Min function value so far   0.0004196
+Total moves                 300
+Downhill                    132
+Accepted uphill             0
+Rejected uphill             168
+Trials out of bounds        0
+New minima this temperature 132
+Current optimal x1           1546.4124      873.17933
+Current optimal x2           1825.4112
+Strength(vm)                0.68236     0.40256     0.80306
+
+
+Intermediate results before next temperature reduction
+current temperature         1.5e-28
+Min function value so far   0.00041959
+Total moves                 300
+Downhill                    142
+Accepted uphill             0
+Rejected uphill             158
+Trials out of bounds        0
+New minima this temperature 142
+Current optimal x1           1562.3673      881.30798
+Current optimal x2           1843.6352
+Strength(vm)                0.71648     0.36491     0.82314
+
+
+Intermediate results before next temperature reduction
+current temperature         1.5e-29
+Min function value so far   0.00041959
+Total moves                 300
+Downhill                    141
+Accepted uphill             0
+Rejected uphill             159
+Trials out of bounds        0
+New minima this temperature 141
+Current optimal x1           1578.2189      890.42747
+Current optimal x2           1860.5772
+Strength(vm)                0.66532     0.36513     0.74616
+
+
+Intermediate results before next temperature reduction
+current temperature         1.5e-30
+Min function value so far   0.00041958
+Total moves                 300
+Downhill                    138
+Accepted uphill             0
+Rejected uphill             162
+Trials out of bounds        0
+New minima this temperature 138
+Current optimal x1           1593.6206      898.21916
+Current optimal x2           1878.4164
+Strength(vm)                0.68195     0.35623     0.67639
+
+
+Intermediate results before next temperature reduction
+current temperature         1.5e-31
+Min function value so far   0.00041957
+Total moves                 300
+Downhill                    138
+Accepted uphill             0
+Rejected uphill             162
+Trials out of bounds        0
+New minima this temperature 138
+Current optimal x1           1607.1373      905.97099
+Current optimal x2           1894.6426
+Strength(vm)                0.64909     0.35581      0.6438
+
+
+Intermediate results before next temperature reduction
+current temperature         1.5e-32
+Min function value so far   0.00041957
+Total moves                 300
+Downhill                    119
+Accepted uphill             0
+Rejected uphill             181
+Trials out of bounds        0
+New minima this temperature 119
+Current optimal x1           1617.4748      912.97715
+Current optimal x2           1907.198
+Strength(vm)                0.58873     0.31523      0.5574
+
+
+Intermediate results before next temperature reduction
+current temperature         1.5e-33
+Min function value so far   0.00041957
+Total moves                 300
+Downhill                    124
+Accepted uphill             0
+Rejected uphill             176
+Trials out of bounds        0
+New minima this temperature 124
+Current optimal x1           1627.3609      918.06096
+Current optimal x2           1917.7617
+Strength(vm)                0.49587     0.27214     0.50617
+
+
+Intermediate results before next temperature reduction
+current temperature         1.5e-34
+Min function value so far   0.00041956
+Total moves                 300
+Downhill                    113
+Accepted uphill             0
+Rejected uphill             187
+Trials out of bounds        0
+New minima this temperature 113
+Current optimal x1           1635.1044      922.19472
+Current optimal x2           1927.4158
+Strength(vm)                0.39823     0.22389     0.42684
+
+
+Intermediate results before next temperature reduction
+current temperature         1.5e-35
+Min function value so far   0.00041956
+Total moves                 300
+Downhill                    148
+Accepted uphill             0
+Rejected uphill             152
+Trials out of bounds        0
+New minima this temperature 148
+Current optimal x1           1643.6896      928.23029
+Current optimal x2           1939.4628
+Strength(vm)                0.37001     0.24096     0.39659
+
+
+Intermediate results before next temperature reduction
+current temperature         1.5e-36
+Min function value so far   0.00041956
+Total moves                 300
+Downhill                    139
+Accepted uphill             0
+Rejected uphill             161
+Trials out of bounds        0
+New minima this temperature 139
+Current optimal x1           1653.3499      932.66495
+Current optimal x2           1948.3801
+Strength(vm)                0.35218     0.22375     0.36893
+
+
+Intermediate results before next temperature reduction
+current temperature         1.5e-37
+Min function value so far   0.00041955
+Total moves                 300
+Downhill                    136
+Accepted uphill             0
+Rejected uphill             164
+Trials out of bounds        0
+New minima this temperature 136
+Current optimal x1           1660.1979      937.01177
+Current optimal x2           1958.7179
+Strength(vm)                0.33521      0.2079     0.37815
+
+
+Intermediate results before next temperature reduction
+current temperature         1.5e-38
+Min function value so far   0.00041955
+Total moves                 300
+Downhill                    152
+Accepted uphill             0
+Rejected uphill             148
+Trials out of bounds        0
+New minima this temperature 152
+Current optimal x1           1669.267      941.05153
+Current optimal x2           1967.1347
+Strength(vm)                0.37837     0.19788     0.36893
+
+
+Intermediate results before next temperature reduction
+current temperature         1.5e-39
+Min function value so far   0.00041955
+Total moves                 300
+Downhill                    138
+Accepted uphill             0
+Rejected uphill             162
+Trials out of bounds        0
+New minima this temperature 138
+Current optimal x1           1675.9389      945.15679
+Current optimal x2           1975.5732
+Strength(vm)                0.35994     0.17949     0.36935
+
+
+Intermediate results before next temperature reduction
+current temperature         1.5e-40
+Min function value so far   0.00041954
+Total moves                 300
+Downhill                    133
+Accepted uphill             0
+Rejected uphill             167
+Trials out of bounds        0
+New minima this temperature 133
+Current optimal x1           1683.7703      948.69288
+Current optimal x2           1984.2553
+Strength(vm)                0.32628     0.16667     0.36913
+
+
+Intermediate results before next temperature reduction
+current temperature         1.5e-41
+Min function value so far   0.00041954
+Total moves                 300
+Downhill                    134
+Accepted uphill             0
+Rejected uphill             166
+Trials out of bounds        0
+New minima this temperature 134
+Current optimal x1           1690.2789      952.56848
+Current optimal x2           1993.3045
+Strength(vm)                0.30298      0.1627     0.36013
+
+
+Intermediate results before next temperature reduction
+current temperature         1.5e-42
+Min function value so far   0.00041954
+Total moves                 300
+Downhill                    144
+Accepted uphill             0
+Rejected uphill             156
+Trials out of bounds        0
+New minima this temperature 144
+Current optimal x1           1698.0196      956.90469
+Current optimal x2           2002.6202
+Strength(vm)                0.30298      0.1627     0.33462
+
+
+Intermediate results before next temperature reduction
+current temperature         1.5e-43
+Min function value so far   0.00041954
+Total moves                 300
+Downhill                    144
+Accepted uphill             0
+Rejected uphill             156
+Trials out of bounds        0
+New minima this temperature 144
+Current optimal x1           1705.393      961.34228
+Current optimal x2           2011.1058
+Strength(vm)                0.29577     0.15873     0.33462
+
+
+Intermediate results before next temperature reduction
+current temperature         1.5e-44
+Min function value so far   0.00041953
+Total moves                 300
+Downhill                    141
+Accepted uphill             0
+Rejected uphill             159
+Trials out of bounds        0
+New minima this temperature 141
+Current optimal x1           1711.9844      964.89828
+Current optimal x2           2018.8871
+Strength(vm)                0.28152     0.15486     0.32665
+
+
+Intermediate results before next temperature reduction
+current temperature         1.5e-45
+Min function value so far   0.00041953
+Total moves                 300
+Downhill                    147
+Accepted uphill             0
+Rejected uphill             153
+Trials out of bounds        0
+New minima this temperature 147
+Current optimal x1           1718.2323      969.67737
+Current optimal x2           2026.7871
+Strength(vm)                0.25519      0.1748      0.3111
+
+
+Intermediate results before next temperature reduction
+current temperature         1.5e-46
+Min function value so far   0.00041953
+Total moves                 300
+Downhill                    136
+Accepted uphill             0
+Rejected uphill             164
+Trials out of bounds        0
+New minima this temperature 136
+Current optimal x1           1723.7951      972.63183
+Current optimal x2           2033.6124
+Strength(vm)                0.26142     0.15845     0.29663
+
+
+Intermediate results before next temperature reduction
+current temperature         1.5e-47
+Min function value so far   0.00041953
+Total moves                 300
+Downhill                    143
+Accepted uphill             0
+Rejected uphill             157
+Trials out of bounds        0
+New minima this temperature 143
+Current optimal x1           1729.58      976.12655
+Current optimal x2           2040.5155
+Strength(vm)                0.24897     0.14372     0.29645
+
+
+Intermediate results before next temperature reduction
+current temperature         1.5e-48
+Min function value so far   0.00041953
+Total moves                 300
+Downhill                    129
+Accepted uphill             0
+Rejected uphill             171
+Trials out of bounds        0
+New minima this temperature 129
+Current optimal x1           1735.0199      978.96193
+Current optimal x2           2045.7103
+Strength(vm)                0.2429     0.12437     0.25593
+
+
+Intermediate results before next temperature reduction
+current temperature         1.5e-49
+Min function value so far   0.00041952
+Total moves                 300
+Downhill                    152
+Accepted uphill             0
+Rejected uphill             148
+Trials out of bounds        0
+New minima this temperature 152
+Current optimal x1           1741.1928      982.04896
+Current optimal x2           2053.3683
+Strength(vm)                0.25504     0.11549     0.26233
+
+
+Intermediate results before next temperature reduction
+current temperature         1.5e-50
+Min function value so far   0.00041952
+Total moves                 300
+Downhill                    129
+Accepted uphill             0
+Rejected uphill             171
+Trials out of bounds        0
+New minima this temperature 129
+Current optimal x1           1745.4983      984.56931
+Current optimal x2           2058.8748
+Strength(vm)                0.23133     0.11267     0.22634
+
+
+Intermediate results before next temperature reduction
+current temperature         1.5e-51
+Min function value so far   0.00041952
+Total moves                 300
+Downhill                    154
+Accepted uphill             0
+Rejected uphill             146
+Trials out of bounds        0
+New minima this temperature 154
+Current optimal x1           1750.5853      987.65446
+Current optimal x2           2064.4191
+Strength(vm)                0.22608     0.12133     0.23766
+
+
+Intermediate results before next temperature reduction
+current temperature         1.5e-52
+Min function value so far   0.00041952
+Total moves                 300
+Downhill                    148
+Accepted uphill             0
+Rejected uphill             152
+Trials out of bounds        0
+New minima this temperature 148
+Current optimal x1           1756.5375      990.16526
+Current optimal x2           2070.3865
+Strength(vm)                0.22608     0.12133     0.24345
+
+
+Intermediate results before next temperature reduction
+current temperature         1.5e-53
+Min function value so far   0.00041952
+Total moves                 300
+Downhill                    144
+Accepted uphill             0
+Rejected uphill             156
+Trials out of bounds        0
+New minima this temperature 144
+Current optimal x1           1760.3738      992.87374
+Current optimal x2           2076.6358
+Strength(vm)                0.20006     0.12437     0.23752
+
+
+Intermediate results before next temperature reduction
+current temperature         1.5e-54
+Min function value so far   0.00041952
+Total moves                 300
+Downhill                    142
+Accepted uphill             0
+Rejected uphill             158
+Trials out of bounds        0
+New minima this temperature 142
+Current optimal x1           1766.0921      995.58731
+Current optimal x2           2081.1015
+Strength(vm)                0.21007     0.11556     0.22607
+
+
+Intermediate results before next temperature reduction
+current temperature         1.5e-55
+Min function value so far   0.00041951
+Total moves                 300
+Downhill                    145
+Accepted uphill             0
+Rejected uphill             155
+Trials out of bounds        0
+New minima this temperature 145
+Current optimal x1           1770.8901       998.1801
+Current optimal x2           2086.8892
+Strength(vm)                0.21007     0.10999     0.23752
+
+
+Intermediate results before next temperature reduction
+current temperature         1.5e-56
+Min function value so far   0.00041951
+Total moves                 300
+Downhill                    150
+Accepted uphill             0
+Rejected uphill             150
+Trials out of bounds        0
+New minima this temperature 150
+Current optimal x1           1775.2087       1000.819
+Current optimal x2           2093.2784
+Strength(vm)                0.19541     0.11274     0.24939
+
+
+Intermediate results before next temperature reduction
+current temperature         1.5e-57
+Min function value so far   0.00041951
+Total moves                 300
+Downhill                    141
+Accepted uphill             0
+Rejected uphill             159
+Trials out of bounds        0
+New minima this temperature 141
+Current optimal x1           1778.8738      1004.1329
+Current optimal x2           2098.8044
+Strength(vm)                0.17703     0.12133     0.23738
+
+
+Intermediate results before next temperature reduction
+current temperature         1.5e-58
+Min function value so far   0.00041951
+Total moves                 300
+Downhill                    124
+Accepted uphill             0
+Rejected uphill             176
+Trials out of bounds        0
+New minima this temperature 124
+Current optimal x1           1783.1123      1005.4743
+Current optimal x2           2102.4076
+Strength(vm)                0.17703    0.092961     0.21543
+
+
+Intermediate results before next temperature reduction
+current temperature         1.5e-59
+Min function value so far   0.00041951
+Total moves                 300
+Downhill                    150
+Accepted uphill             0
+Rejected uphill             150
+Trials out of bounds        0
+New minima this temperature 150
+Current optimal x1           1787.9708      1008.2041
+Current optimal x2           2107.2201
+Strength(vm)                0.17282    0.097609     0.20505
+
+
+Intermediate results before next temperature reduction
+current temperature         1.5e-60
+Min function value so far   0.00041951
+Total moves                 300
+Downhill                    151
+Accepted uphill             0
+Rejected uphill             149
+Trials out of bounds        0
+New minima this temperature 151
+Current optimal x1           1791.7988      1010.5155
+Current optimal x2           2112.985
+Strength(vm)                0.15675    0.097723     0.22068
+
+
+Intermediate results before next temperature reduction
+current temperature         1.5e-61
+Min function value so far   0.00041951
+Total moves                 300
+Downhill                    154
+Accepted uphill             0
+Rejected uphill             146
+Trials out of bounds        0
+New minima this temperature 154
+Current optimal x1           1796.4655      1012.8146
+Current optimal x2           2117.4631
+Strength(vm)                0.16067    0.093069     0.21543
+
+
+Intermediate results before next temperature reduction
+current temperature         1.5e-62
+Min function value so far   0.0004195
+Total moves                 300
+Downhill                    174
+Accepted uphill             0
+Rejected uphill             126
+Trials out of bounds        0
+New minima this temperature 174
+Current optimal x1           1802.0934      1015.5367
+Current optimal x2           2124.3264
+Strength(vm)                0.2046     0.10034      0.2262
+
+
+Intermediate results before next temperature reduction
+current temperature         1.5e-63
+Min function value so far   0.0004195
+Total moves                 300
+Downhill                    153
+Accepted uphill             0
+Rejected uphill             147
+Trials out of bounds        0
+New minima this temperature 153
+Current optimal x1           1807.8452      1017.8891
+Current optimal x2           2130.1722
+Strength(vm)                0.21994     0.10034      0.2262
+
+
+Intermediate results before next temperature reduction
+current temperature         1.5e-64
+Min function value so far   0.0004195
+Total moves                 300
+Downhill                    152
+Accepted uphill             0
+Rejected uphill             148
+Trials out of bounds        0
+New minima this temperature 152
+Current optimal x1           1812.3724      1021.0537
+Current optimal x2           2135.1286
+Strength(vm)                0.21496     0.10806     0.23145
+
+
+Intermediate results before next temperature reduction
+current temperature         1.5e-65
+Min function value so far   0.0004195
+Total moves                 300
+Downhill                    146
+Accepted uphill             0
+Rejected uphill             154
+Trials out of bounds        0
+New minima this temperature 146
+Current optimal x1           1817.528      1023.0359
+Current optimal x2           2141.4112
+Strength(vm)                0.20959      0.1004     0.23723
+
+
+Intermediate results before next temperature reduction
+current temperature         1.5e-66
+Min function value so far   0.0004195
+Total moves                 300
+Downhill                    131
+Accepted uphill             0
+Rejected uphill             169
+Trials out of bounds        0
+New minima this temperature 131
+Current optimal x1           1820.9901      1025.6868
+Current optimal x2           2145.589
+Strength(vm)                0.18536     0.10291     0.20493
+
+
+Intermediate results before next temperature reduction
+current temperature         1.5e-67
+Min function value so far   0.0004195
+Total moves                 300
+Downhill                    158
+Accepted uphill             0
+Rejected uphill             142
+Trials out of bounds        0
+New minima this temperature 158
+Current optimal x1           1825.3269      1028.0968
+Current optimal x2           2152.0801
+Strength(vm)                0.18988    0.097953     0.22607
+
+
+Intermediate results before next temperature reduction
+current temperature         1.5e-68
+Min function value so far   0.0004195
+Total moves                 300
+Downhill                    135
+Accepted uphill             0
+Rejected uphill             165
+Trials out of bounds        0
+New minima this temperature 135
+Current optimal x1           1830.1729      1030.0827
+Current optimal x2           2156.6384
+Strength(vm)                0.18084    0.093233     0.20005
+
+
+Intermediate results before next temperature reduction
+current temperature         1.5e-69
+Min function value so far   0.00041949
+Total moves                 300
+Downhill                    157
+Accepted uphill             0
+Rejected uphill             143
+Trials out of bounds        0
+New minima this temperature 157
+Current optimal x1           1835.1931      1032.8446
+Current optimal x2           2162.5785
+Strength(vm)                0.18999     0.09562     0.21518
+
+
+Intermediate results before next temperature reduction
+current temperature         1.5e-70
+Min function value so far   0.00041949
+Total moves                 300
+Downhill                    143
+Accepted uphill             0
+Rejected uphill             157
+Trials out of bounds        0
+New minima this temperature 143
+Current optimal x1           1839.4784      1035.4289
+Current optimal x2           2167.4118
+Strength(vm)                0.17643    0.098011     0.22056
+
+
+Intermediate results before next temperature reduction
+current temperature         1.5e-71
+Min function value so far   0.00041949
+Total moves                 300
+Downhill                    160
+Accepted uphill             0
+Rejected uphill             140
+Trials out of bounds        0
+New minima this temperature 160
+Current optimal x1           1844.0949      1038.3215
+Current optimal x2           2173.7446
+Strength(vm)                0.16802     0.10548     0.23172
+
+
+Intermediate results before next temperature reduction
+current temperature         1.5e-72
+Min function value so far   0.00041949
+Total moves                 300
+Downhill                    141
+Accepted uphill             0
+Rejected uphill             159
+Trials out of bounds        0
+New minima this temperature 141
+Current optimal x1           1848.4898      1040.3852
+Current optimal x2           2178.4348
+Strength(vm)                0.17223    0.098011     0.21554
+
+
+Intermediate results before next temperature reduction
+current temperature         1.5e-73
+Min function value so far   0.00041949
+Total moves                 300
+Downhill                    146
+Accepted uphill             0
+Rejected uphill             154
+Trials out of bounds        0
+New minima this temperature 146
+Current optimal x1           1852.575      1042.6571
+Current optimal x2           2183.1765
+Strength(vm)                0.16402    0.098011     0.20027
+
+
+Intermediate results before next temperature reduction
+current temperature         1.5e-74
+Min function value so far   0.00041949
+Total moves                 300
+Downhill                    128
+Accepted uphill             0
+Rejected uphill             172
+Trials out of bounds        0
+New minima this temperature 128
+Current optimal x1           1855.9977      1044.6055
+Current optimal x2           2187.3241
+Strength(vm)                0.1524    0.091013     0.18609
+
+
+Intermediate results before next temperature reduction
+current temperature         1.5e-75
+Min function value so far   0.00041949
+Total moves                 300
+Downhill                    149
+Accepted uphill             0
+Rejected uphill             151
+Trials out of bounds        0
+New minima this temperature 149
+Current optimal x1           1859.9443      1046.7536
+Current optimal x2           2191.9979
+Strength(vm)                0.14877    0.093288     0.17722
+
+
+Intermediate results before next temperature reduction
+current temperature         1.5e-76
+Min function value so far   0.00041948
+Total moves                 300
+Downhill                    149
+Accepted uphill             0
+Rejected uphill             151
+Trials out of bounds        0
+New minima this temperature 149
+Current optimal x1           1862.777      1049.3236
+Current optimal x2           2195.8208
+Strength(vm)                0.13486     0.10542     0.17722
+
+
+Intermediate results before next temperature reduction
+current temperature         1.5e-77
+Min function value so far   0.00041948
+Total moves                 300
+Downhill                    160
+Accepted uphill             0
+Rejected uphill             140
+Trials out of bounds        0
+New minima this temperature 160
+Current optimal x1           1867.1048      1051.7766
+Current optimal x2           2199.334
+Strength(vm)                0.15621     0.10542     0.16868
+
+
+Intermediate results before next temperature reduction
+current temperature         1.5e-78
+Min function value so far   0.00041948
+Total moves                 300
+Downhill                    146
+Accepted uphill             0
+Rejected uphill             154
+Trials out of bounds        0
+New minima this temperature 146
+Current optimal x1           1870.4119      1054.3046
+Current optimal x2           2203.8747
+Strength(vm)                0.14877     0.10285     0.16878
+
+
+Intermediate results before next temperature reduction
+current temperature         1.5e-79
+Min function value so far   0.00041948
+Total moves                 300
+Downhill                    131
+Accepted uphill             0
+Rejected uphill             169
+Trials out of bounds        0
+New minima this temperature 131
+Current optimal x1           1872.9209      1056.2852
+Current optimal x2           2208.3224
+Strength(vm)                0.12225    0.088844     0.17733
+
+
+Intermediate results before next temperature reduction
+current temperature         1.5e-80
+Min function value so far   0.00041948
+Total moves                 300
+Downhill                    153
+Accepted uphill             0
+Rejected uphill             147
+Trials out of bounds        0
+New minima this temperature 153
+Current optimal x1           1875.7529      1058.3654
+Current optimal x2           2212.6393
+Strength(vm)                0.12523    0.088896     0.18176
+
+
+Intermediate results before next temperature reduction
+current temperature         1.5e-81
+Min function value so far   0.00041948
+Total moves                 300
+Downhill                    126
+Accepted uphill             0
+Rejected uphill             174
+Trials out of bounds        0
+New minima this temperature 126
+Current optimal x1           1878.816      1059.8319
+Current optimal x2           2216.1166
+Strength(vm)                0.12523    0.074962     0.17311
+
+SA achieved termination criteria.exitflag=0
+
+OPTIMAL VALUE OF THE PARAMETERS:
+
+          phi_pi          1878.82
+
+           phi_q          1059.83
+
+         phi_alt          2216.12
+
+Objective function :       0.00041948
+
+
+[Warning: Some of the parameters have no value (sigma_phi0) when using stoch_simul. If these parameters are not initialized in a
+steadystate file or a steady_state_model-block, Dynare may not be able to solve the model. Note that simul,
+perfect_foresight_setup, and perfect_foresight_solver do not automatically call the steady state file.] 
+
+MODEL SUMMARY
+
+  Number of variables:         64
+  Number of stochastic shocks: 3
+  Number of state variables:   18
+  Number of jumpers:           3
+  Number of static variables:  44
+
+
+MATRIX OF COVARIANCE OF EXOGENOUS SHOCKS
+Variables      eps_mu     eps_z   eps_mps
+eps_mu       0.000100  0.000000  0.000000
+eps_z        0.000000  0.090000  0.000000
+eps_mps      0.000000  0.000000  0.000000
+
+POLICY AND TRANSITION FUNCTIONS
+                                   Q          lambda               R               X             r_u             r_e            teta               U             l_b             l_g            empl              mu             mps               z              EE              UE              AC               C               v          varphi              VU           Q_hat      lambda_hat           R_hat              pi           W_hat           X_hat         r_u_hat         r_e_hat        mu_e_hat        teta_hat     phi_cap_hat           U_hat         l_b_hat         l_g_hat        empl_hat         lab_hat          mu_hat           z_hat         mps_hat            INFL          EE_hat          UE_hat          AC_hat           C_hat           v_hat      varphi_hat        WplusLam         b_share         g_share           H_hat         TFP_hat         EEf_hat         UEf_hat
+Constant                    1.344611        0.523399        0.005025        0.482564        0.250000        0.187523        1.000000        0.049935        0.182412        0.767652        0.950065        1.000000        1.000000        1.000000        0.024000        0.250000        0.096000        1.238184        0.569450        0.482564       12.676158               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0
+R_hat(-1)                  -0.004930        0.007085        0.000068       -0.027329        0.004378        0.003417        0.005645       -0.000530        0.000096        0.000434        0.000530               0               0               0        0.000478        0.004914        0.000025       -0.005531        0.003215       -0.027329       -0.171594       -0.003667        0.013537        0.013558       -0.000216       -0.015771       -0.056633        0.017511        0.018219       -0.000032        0.005645        0.002145       -0.010619        0.000526        0.000566        0.000558       -0.015387               0               0               0       -0.000216        0.019914        0.019656        0.000258       -0.004467        0.005645       -0.056633       -0.002235       -0.000032        0.000008       -0.015945        0.011721        0.020472        0.009037
+mu_e_hat(-1)               -0.028305        0.159560        0.001554       -0.130499       -0.004253        0.076986        0.904452       -0.008813       -0.001860        0.010673        0.008813               0               0               0        0.011580        0.081670        0.014957       -0.124563        0.515041       -0.130499       -3.864366       -0.021051        0.304853        0.309253       -0.000578       -0.304059       -0.270429       -0.017010        0.410543       -0.019475        0.904452        0.343692       -0.176483       -0.010199        0.013904        0.009276        0.022013               0               0               0       -0.000578        0.482480        0.326681        0.155799       -0.100602        0.904452       -0.270429        0.000794       -0.019475        0.004628        0.012737       -0.043063        0.491756        0.150198
+U_hat(-1)                  -0.001418        0.008392       -0.000090        0.092314       -0.019389       -0.016256        0.008490        0.038801        0.005552       -0.044352       -0.038801               0               0               0       -0.001404       -0.018582        0.001519       -0.006551        0.027464        0.092314       -0.203239       -0.001055        0.016033       -0.017841       -0.001055       -0.003091        0.191299       -0.077555       -0.086687        0.071276        0.008490        0.003226        0.777015        0.030436       -0.057777       -0.040840        0.035873               0               0               0       -0.001055       -0.058504       -0.074329        0.015825       -0.005291        0.048229        0.191299        0.012942        0.071276       -0.016937        0.076713       -0.036928       -0.099344        0.702686
+l_b_hat(-1)                -0.057679       -0.031243       -0.001555       -0.340169       -0.055905        0.046165       -0.771135        0.013937        0.162345       -0.176282       -0.013937               0               0               0        0.000455       -0.129163        0.051417        0.024391       -0.439123       -0.340169        0.756675       -0.042897       -0.059693       -0.309387       -0.029209       -0.155034       -0.704920       -0.223619        0.246183        0.904657       -0.771135       -0.293031        0.279110        0.889987       -0.229638       -0.014670       -0.297577               0               0               0       -0.029209        0.018939       -0.516651        0.535590        0.019699       -0.771135       -0.704920       -0.214727        0.904657       -0.214968       -0.282907        0.254680        0.004269       -0.237540
+mu_hat(-1)                  0.180015        0.869326       -0.000058       -1.058036        0.001953        0.036513       -2.867909        0.029189       -0.007157       -0.022031       -0.029189        0.940000               0               0       -0.024333       -0.270499        0.006538        0.485238       -1.633132       -1.058036      -21.054137        0.133879        1.660924       -0.011511       -0.109298       -1.756710       -2.192530        0.007811        0.194713       -0.008513       -2.867909       -1.089805        0.584526       -0.039236       -0.028700       -0.030723       -0.227417        0.940000               0               0       -0.109298       -1.013888       -1.081995        0.068107        0.391895       -2.867909       -2.192530       -0.095786       -0.008513        0.002023       -0.196694        0.361295       -1.044611       -0.497469
+z_hat(-1)                   0.017925        0.078903        0.000397       -1.842767        0.220531        0.240600        0.747194       -0.031456        0.002708        0.028748        0.031456               0               0        0.494000        0.031492        0.291514        0.014025       -0.061597        0.425490       -1.604381       -1.910946        0.013331        0.150751        0.078960       -0.026374       -0.448862       -3.818701        0.882124        1.283043       -0.018262        0.747194        0.283934       -0.629939        0.014848        0.037449        0.033110       -1.141252               0        0.494000               0       -0.026374        1.312151        1.166058        0.146093       -0.049748        0.747194       -3.324701       -0.298110       -0.018262        0.004339       -1.174361        1.154583        1.345261        0.536118
+mps_hat(-1)                -0.005511       -0.004285       -0.000013       -0.033254       -0.006519        0.004560       -0.083208        0.001556       -0.000718       -0.000839       -0.001556               0        0.930000               0       -0.000944       -0.014424        0.001763        0.003345       -0.047383       -0.033254        0.103775       -0.004098       -0.008187       -0.002609       -0.002280       -0.014621       -0.068912       -0.026077        0.024314       -0.002295       -0.083208       -0.031619        0.031169       -0.003934       -0.001093       -0.001638       -0.030165               0               0        0.930000       -0.002280       -0.039333       -0.057696        0.018362        0.002702       -0.083208       -0.068912       -0.022808       -0.002295        0.000545       -0.028526        0.026066       -0.040972       -0.026527
+pi(-2)                             0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0        1.000000               0               0               0               0               0               0               0               0               0               0               0               0               0
+pi(-3)                             0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0        1.000000               0               0               0               0               0               0               0               0               0               0               0               0               0
+pi(-4)                             0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0        1.000000               0               0               0               0               0               0               0               0               0               0               0               0               0
+pi(-5)                             0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0        1.000000               0               0               0               0               0               0               0               0               0               0               0               0               0
+pi(-6)                             0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0        1.000000               0               0               0               0               0               0               0               0               0               0               0               0               0
+pi(-7)                             0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0        1.000000               0               0               0               0               0               0               0               0               0               0               0               0               0
+pi(-8)                             0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0        1.000000               0               0               0               0               0               0               0               0               0               0               0               0               0
+pi(-9)                             0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0        1.000000               0               0               0               0               0               0               0               0               0               0               0               0               0
+pi(-10)                            0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0        1.000000               0               0               0               0               0               0               0               0               0               0               0               0               0
+pi(-11)                            0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0        1.000000               0               0               0               0               0               0               0               0               0               0               0               0               0
+pi(-1)                             0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0               0        1.000000               0               0               0               0               0               0               0               0               0               0               0               0               0
+eps_mu                     -0.191505       -0.924815        0.000062        1.125570       -0.002077       -0.038844        3.050967       -0.031052        0.007614        0.023438        0.031052       -1.000000               0               0        0.025887        0.287765       -0.006956       -0.516211        1.737374        1.125570       22.398018       -0.142424       -1.766941        0.012246        0.116275        1.868840        2.332479       -0.008309       -0.207142        0.009057        3.050967        1.159367       -0.621836        0.041740        0.030532        0.032684        0.241933       -1.000000               0               0        0.116275        1.078604        1.151058       -0.072454       -0.416910        3.050967        2.332479        0.101900        0.009057       -0.002152        0.209249       -0.384357        1.111288        0.529222
+eps_z                      -0.036285       -0.159723       -0.000803        3.730298       -0.446419       -0.487044       -1.512539        0.063677       -0.005483       -0.058194       -0.063677               0               0       -1.000000       -0.063748       -0.590110       -0.028391        0.124690       -0.861316        3.247734        3.868311       -0.026985       -0.305164       -0.159839        0.053389        0.908627        7.730164       -1.785676       -2.597253        0.036967       -1.512539       -0.574765        1.275181       -0.030057       -0.075808       -0.067024        2.310226               0       -1.000000               0        0.053389       -2.656176       -2.360441       -0.295736        0.100704       -1.512539        6.730164        0.603462        0.036967       -0.008784        2.377250       -2.337212       -2.723200       -1.085259
+eps_mps                    -0.005925       -0.004607       -0.000014       -0.035757       -0.007010        0.004903       -0.089471        0.001674       -0.000772       -0.000902       -0.001674               0        1.000000               0       -0.001015       -0.015510        0.001895        0.003597       -0.050949       -0.035757        0.111586       -0.004407       -0.008803       -0.002805       -0.002452       -0.015722       -0.074098       -0.028040        0.026145       -0.002468       -0.089471       -0.033999        0.033515       -0.004230       -0.001175       -0.001762       -0.032435               0               0        1.000000       -0.002452       -0.042294       -0.062039        0.019744        0.002905       -0.089471       -0.074098       -0.024525       -0.002468        0.000586       -0.030673        0.028028       -0.044056       -0.028523
+
+
+THEORETICAL MOMENTS
+VARIABLE            MEAN  STD. DEV.   VARIANCE
+Q                 1.3446     0.0202     0.0004
+lambda            0.5234     0.0648     0.0042
+R                 0.0050     0.0003     0.0000
+X                 0.4826     1.3203     1.7432
+r_u               0.2500     0.1630     0.0266
+r_e               0.1875     0.1731     0.0300
+teta              1.0000     0.5140     0.2642
+U                 0.0499     0.0520     0.0027
+l_b               0.1824     0.0266     0.0007
+l_g               0.7677     0.0691     0.0048
+empl              0.9501     0.0520     0.0027
+mu                1.0000     0.0293     0.0009
+mps               1.0000     0.0001     0.0000
+z                 1.0000     0.3450     0.1191
+EE                0.0240     0.0224     0.0005
+UE                0.2500     0.2098     0.0440
+AC                0.0960     0.0142     0.0002
+C                 1.2382     0.0474     0.0023
+v                 0.5695     0.2884     0.0832
+varphi            0.4826     1.1542     1.3321
+VU               12.6762     1.5683     2.4597
+Q_hat             0.0000     0.0150     0.0002
+lambda_hat        0.0000     0.1237     0.0153
+R_hat             0.0000     0.0561     0.0031
+pi                0.0000     0.0191     0.0004
+W_hat             0.0000     0.3222     0.1038
+X_hat             0.0000     2.7360     7.4858
+r_u_hat           0.0000     0.6519     0.4250
+r_e_hat           0.0000     0.9232     0.8522
+mu_e_hat          0.0000     0.1791     0.0321
+teta_hat          0.0000     0.5140     0.2642
+phi_cap_hat       0.0000     0.1953     0.0381
+U_hat             0.0000     1.0415     1.0848
+l_b_hat           0.0000     0.1456     0.0212
+l_g_hat           0.0000     0.0900     0.0081
+empl_hat          0.0000     0.0547     0.0030
+lab_hat           0.0000     0.8114     0.6584
+mu_hat            0.0000     0.0293     0.0009
+z_hat             0.0000     0.3450     0.1191
+mps_hat           0.0000     0.0001     0.0000
+INFL              0.0000     0.1027     0.0105
+EE_hat            0.0000     0.9313     0.8673
+UE_hat            0.0000     0.8392     0.7043
+AC_hat            0.0000     0.1482     0.0220
+C_hat             0.0000     0.0383     0.0015
+v_hat             0.0000     0.5065     0.2565
+varphi_hat        0.0000     2.3917     5.7204
+WplusLam          0.0000     0.2145     0.0460
+b_share           0.0000     0.1791     0.0321
+g_share           0.0000     0.0426     0.0018
+H_hat             0.0000     0.8503     0.7230
+TFP_hat           0.0000     0.8213     0.6745
+EEf_hat           0.0000     0.9691     0.9392
+UEf_hat           0.0000     0.7006     0.4909
+
+
+
+VARIANCE DECOMPOSITION (in percent)
+                eps_mu    eps_z  eps_mps
+Q                 6.59    93.41     0.00
+lambda           19.58    80.42     0.00
+R                 0.01    99.99     0.00
+X                 0.05    99.95     0.00
+r_u               0.01    99.99     0.00
+r_e               0.00   100.00     0.00
+teta              2.77    97.23     0.00
+U                 0.49    99.51     0.00
+l_b               0.34    99.66     0.00
+l_g               0.49    99.51     0.00
+empl              0.49    99.51     0.00
+mu              100.00     0.00     0.00
+mps               0.00     0.00   100.00
+z                 0.00   100.00     0.00
+EE                0.12    99.88     0.00
+UE                0.21    99.79     0.00
+AC                0.33    99.67     0.00
+C                 8.71    91.29     0.00
+v                 2.69    97.31     0.00
+varphi            0.06    99.94     0.00
+VU               19.58    80.42     0.00
+Q_hat             6.59    93.41     0.00
+lambda_hat       19.58    80.42     0.00
+R_hat             0.01    99.99     0.00
+pi                3.55    96.45     0.00
+W_hat             3.21    96.79     0.00
+X_hat             0.05    99.95     0.00
+r_u_hat           0.01    99.99     0.00
+r_e_hat           0.00   100.00     0.00
+mu_e_hat          0.41    99.59     0.00
+teta_hat          2.77    97.23     0.00
+phi_cap_hat       2.77    97.23     0.00
+U_hat             0.49    99.51     0.00
+l_b_hat           0.34    99.66     0.00
+l_g_hat           0.49    99.51     0.00
+empl_hat          0.49    99.51     0.00
+lab_hat           0.01    99.99     0.00
+mu_hat          100.00     0.00     0.00
+z_hat             0.00   100.00     0.00
+mps_hat           0.00     0.00   100.00
+INFL             14.41    85.59     0.00
+EE_hat            0.12    99.88     0.00
+UE_hat            0.21    99.79     0.00
+AC_hat            0.33    99.67     0.00
+C_hat             8.71    91.29     0.00
+v_hat             2.69    97.31     0.00
+varphi_hat        0.06    99.94     0.00
+WplusLam          0.02    99.98     0.00
+b_share           0.41    99.59     0.00
+g_share           0.41    99.59     0.00
+H_hat             0.00   100.00     0.00
+TFP_hat           0.01    99.99     0.00
+EEf_hat           0.13    99.87     0.00
+UEf_hat           0.30    99.70     0.00
+
+
+
+MATRIX OF CORRELATIONS
+Variables                Q       lambda            R            X          r_u          r_e         teta            U          l_b          l_g         empl           mu          mps            z           EE           UE           AC            C            v       varphi           VU        Q_hat   lambda_hat        R_hat           pi        W_hat        X_hat      r_u_hat      r_e_hat     mu_e_hat     teta_hat  phi_cap_hat        U_hat      l_b_hat      l_g_hat     empl_hat      lab_hat       mu_hat        z_hat      mps_hat         INFL       EE_hat       UE_hat       AC_hat        C_hat        v_hat   varphi_hat     WplusLam      b_share      g_share        H_hat      TFP_hat      EEf_hat      UEf_hat
+Q                   1.0000       0.3035       0.6760      -0.6620       0.7458       0.6229       0.5322      -0.7769      -0.6966       0.8524       0.7769       0.2541      -0.0000       0.6645       0.6156       0.7032      -0.1139      -0.1290       0.4879      -0.6614      -0.3035       1.0000       0.3035       0.6760      -0.4935      -0.5088      -0.6620       0.7458       0.6229      -0.8038       0.5322       0.5322      -0.7769      -0.6966       0.8524       0.7769      -0.6518       0.2541       0.6645      -0.0000      -0.5290       0.6156       0.7032      -0.1139      -0.1290       0.4879      -0.6614      -0.5892      -0.8038       0.8038      -0.6720       0.6623       0.6354      -0.3127
+lambda              0.3035       1.0000       0.7457      -0.7677       0.6801       0.7779       0.7311      -0.1957       0.4618      -0.0302       0.1957       0.4419      -0.0000       0.7631       0.7647       0.6985       0.8499      -0.7275       0.7540      -0.7681      -1.0000       0.3035       1.0000       0.7457      -0.9238      -0.9169      -0.7677       0.6801       0.7779       0.3156       0.7311       0.7311      -0.1957       0.4618      -0.0302       0.1957      -0.7681       0.4419       0.7631      -0.0000      -0.1807       0.7647       0.6985       0.8499      -0.7275       0.7540      -0.7681      -0.8004       0.3156      -0.3156      -0.7456       0.7645       0.7458       0.5458
+R                   0.6760       0.7457       1.0000      -0.9987       0.9925       0.9961       0.9738      -0.7070      -0.0218       0.5405       0.7070      -0.0083       0.0000       0.9993       0.9968       0.9976       0.6148      -0.8008       0.9580      -0.9983      -0.7457       0.6760       0.7457       1.0000      -0.9392      -0.9463      -0.9987       0.9925       0.9961      -0.2338       0.9738       0.9738      -0.7070      -0.0218       0.5405       0.7070      -0.9990      -0.0083       0.9993       0.0000      -0.3654       0.9968       0.9976       0.6148      -0.8008       0.9580      -0.9983      -0.9912      -0.2338       0.2338      -0.9988       0.9993       0.9978       0.1439
+X                  -0.6620      -0.7677      -0.9987       1.0000      -0.9894      -0.9986      -0.9687       0.7046      -0.0085      -0.5270      -0.7046      -0.0222      -0.0000      -0.9981      -0.9973      -0.9940      -0.6381       0.8010      -0.9529       1.0000       0.7677      -0.6620      -0.7677      -0.9987       0.9514       0.9575       1.0000      -0.9894      -0.9986       0.2085      -0.9687      -0.9687       0.7046      -0.0085      -0.5270      -0.7046       0.9997      -0.0222      -0.9981      -0.0000       0.3813      -0.9973      -0.9940      -0.6381       0.8010      -0.9529       1.0000       0.9954       0.2085      -0.2085       0.9994      -0.9998      -0.9981      -0.1432
+r_u                 0.7458       0.6801       0.9925      -0.9894       1.0000       0.9823       0.9472      -0.7811      -0.1324       0.6387       0.7811      -0.0085      -0.0000       0.9881       0.9817       0.9972       0.5219      -0.7311       0.9228      -0.9893      -0.6801       0.7458       0.6801       0.9925      -0.8995      -0.9084      -0.9894       1.0000       0.9823      -0.3464       0.9472       0.9472      -0.7811      -0.1324       0.6387       0.7811      -0.9878      -0.0085       0.9881      -0.0000      -0.4257       0.9817       0.9972       0.5219      -0.7311       0.9228      -0.9893      -0.9721      -0.3464       0.3464      -0.9930       0.9896       0.9875       0.0333
+r_e                 0.6229       0.7779       0.9961      -0.9986       0.9823       1.0000       0.9736      -0.6881       0.0551       0.4966       0.6881       0.0047       0.0000       0.9959       0.9988       0.9896       0.6725      -0.8252       0.9595      -0.9987      -0.7779       0.6229       0.7779       0.9961      -0.9584      -0.9637      -0.9986       0.9823       1.0000      -0.1655       0.9736       0.9736      -0.6881       0.0551       0.4966       0.6881      -0.9989       0.0047       0.9959       0.0000      -0.3673       0.9988       0.9896       0.6725      -0.8252       0.9595      -0.9987      -0.9988      -0.1655       0.1655      -0.9976       0.9983       0.9986       0.1625
+teta                0.5322       0.7311       0.9738      -0.9687       0.9472       0.9736       1.0000      -0.5839       0.1023       0.4001       0.5839      -0.1662      -0.0000       0.9775       0.9832       0.9685       0.6941      -0.9061       0.9968      -0.9671      -0.7311       0.5322       0.7311       0.9738      -0.9226      -0.9289      -0.9687       0.9472       0.9736      -0.0953       1.0000       1.0000      -0.5839       0.1023       0.4001       0.5839      -0.9741      -0.1662       0.9775      -0.0000      -0.2146       0.9832       0.9685       0.6941      -0.9061       0.9968      -0.9671      -0.9735      -0.0953       0.0953      -0.9672       0.9721       0.9778       0.2921
+U                  -0.7769      -0.1957      -0.7070       0.7046      -0.7811      -0.6881      -0.5839       1.0000       0.4944      -0.9425      -1.0000       0.0641       0.0000      -0.6810      -0.6764      -0.7426      -0.0450       0.2575      -0.5175       0.7078       0.1957      -0.7769      -0.1957      -0.7070       0.5030       0.5153       0.7046      -0.7811      -0.6881       0.7075      -0.5839      -0.5839       1.0000       0.4944      -0.9425      -1.0000       0.6934       0.0641      -0.6810       0.0000       0.6664      -0.6764      -0.7426      -0.0450       0.2575      -0.5175       0.7078       0.6612       0.7075      -0.7075       0.7261      -0.6993      -0.7064       0.5970
+l_b                -0.6966       0.4618      -0.0218      -0.0085      -0.1324       0.0551       0.1023       0.4944       1.0000      -0.7564      -0.4944       0.0260      -0.0000      -0.0011       0.0520      -0.0791       0.7744      -0.4722       0.1549      -0.0099      -0.4618      -0.6966       0.4618      -0.0218      -0.2648      -0.2459      -0.0085      -0.1324       0.0551       0.9641       0.1023       0.1023       0.4944       1.0000      -0.7564      -0.4944      -0.0180       0.0260      -0.0011      -0.0000       0.3115       0.0520      -0.0791       0.7744      -0.4722       0.1549      -0.0099      -0.1029       0.9641      -0.9641       0.0146       0.0051       0.0220       0.6402
+l_g                 0.8524      -0.0302       0.5405      -0.5270       0.6387       0.4966       0.4001      -0.9425      -0.7564       1.0000       0.9425      -0.0583      -0.0000       0.5129       0.4890       0.5892      -0.2637      -0.0123       0.3299      -0.5289       0.0302       0.8524      -0.0302       0.5405      -0.2768      -0.2933      -0.5270       0.6387       0.4966      -0.9030       0.4001       0.4001      -0.9425      -0.7564       1.0000       0.9425      -0.5149      -0.0583       0.5129      -0.0000      -0.6212       0.4890       0.5892      -0.2637      -0.0123       0.3299      -0.5289      -0.4580      -0.9030       0.9030      -0.5520       0.5243       0.5232      -0.6954
+empl                0.7769       0.1957       0.7070      -0.7046       0.7811       0.6881       0.5839      -1.0000      -0.4944       0.9425       1.0000      -0.0641      -0.0000       0.6810       0.6764       0.7426       0.0450      -0.2575       0.5175      -0.7078      -0.1957       0.7769       0.1957       0.7070      -0.5030      -0.5153      -0.7046       0.7811       0.6881      -0.7075       0.5839       0.5839      -1.0000      -0.4944       0.9425       1.0000      -0.6934      -0.0641       0.6810      -0.0000      -0.6664       0.6764       0.7426       0.0450      -0.2575       0.5175      -0.7078      -0.6612      -0.7075       0.7075      -0.7261       0.6993       0.7064      -0.5970
+mu                  0.2541       0.4419      -0.0083      -0.0222      -0.0085       0.0047      -0.1662       0.0641       0.0260      -0.0583      -0.0641       1.0000       0.0000       0.0000      -0.0343      -0.0453       0.0411       0.2941      -0.1638      -0.0254      -0.4419       0.2541       0.4419      -0.0083      -0.1880      -0.1788      -0.0222      -0.0085       0.0047       0.0407      -0.1662      -0.1662       0.0641       0.0260      -0.0583      -0.0641      -0.0071       1.0000       0.0000       0.0000      -0.3047      -0.0343      -0.0453       0.0411       0.2941      -0.1638      -0.0254      -0.0137       0.0407      -0.0407      -0.0026       0.0116      -0.0366       0.0411
+mps                -0.0000      -0.0000       0.0000      -0.0000      -0.0000       0.0000      -0.0000       0.0000      -0.0000      -0.0000      -0.0000       0.0000       1.0000       0.0000      -0.0000      -0.0000       0.0000       0.0000      -0.0000      -0.0000       0.0000      -0.0000      -0.0000      -0.0000      -0.0000      -0.0000      -0.0000      -0.0000       0.0000       0.0000      -0.0000      -0.0000       0.0000      -0.0000      -0.0000      -0.0000      -0.0000       0.0000       0.0000       1.0000      -0.0000      -0.0000      -0.0000       0.0000       0.0000      -0.0000      -0.0000      -0.0000       0.0000      -0.0000      -0.0000       0.0000      -0.0000       0.0000
+z                   0.6645       0.7631       0.9993      -0.9981       0.9881       0.9959       0.9775      -0.6810      -0.0011       0.5129       0.6810       0.0000       0.0000       1.0000       0.9971       0.9950       0.6315      -0.8131       0.9644      -0.9975      -0.7631       0.6645       0.7631       0.9993      -0.9469      -0.9536      -0.9981       0.9881       0.9959      -0.2091       0.9775       0.9775      -0.6810      -0.0011       0.5129       0.6810      -0.9989       0.0000       1.0000       0.0000      -0.3473       0.9971       0.9950       0.6315      -0.8131       0.9644      -0.9975      -0.9921      -0.2091       0.2091      -0.9971       0.9990       0.9966       0.1795
+EE                  0.6156       0.7647       0.9968      -0.9973       0.9817       0.9988       0.9832      -0.6764       0.0520       0.4890       0.6764      -0.0343      -0.0000       0.9971       1.0000       0.9914       0.6700      -0.8409       0.9706      -0.9970      -0.7647       0.6156       0.7647       0.9968      -0.9517      -0.9575      -0.9973       0.9817       0.9988      -0.1645       0.9832       0.9832      -0.6764       0.0520       0.4890       0.6764      -0.9985      -0.0343       0.9971      -0.0000      -0.3403       1.0000       0.9914       0.6700      -0.8409       0.9706      -0.9970      -0.9972      -0.1645       0.1645      -0.9964       0.9978       0.9991       0.1820
+UE                  0.7032       0.6985       0.9976      -0.9940       0.9972       0.9896       0.9685      -0.7426      -0.0791       0.5892       0.7426      -0.0453      -0.0000       0.9950       0.9914       1.0000       0.5669      -0.7788       0.9488      -0.9935      -0.6985       0.7032       0.6985       0.9976      -0.9134      -0.9218      -0.9940       0.9972       0.9896      -0.2912       0.9685       0.9685      -0.7426      -0.0791       0.5892       0.7426      -0.9940      -0.0453       0.9950      -0.0000      -0.3806       0.9914       1.0000       0.5669      -0.7788       0.9488      -0.9935      -0.9817      -0.2912       0.2912      -0.9964       0.9949       0.9946       0.0939
+AC                 -0.1139       0.8499       0.6148      -0.6381       0.5219       0.6725       0.6941      -0.0450       0.7744      -0.2637       0.0450       0.0411       0.0000       0.6315       0.6700       0.5669       1.0000      -0.8741       0.7268      -0.6388      -0.8499      -0.1139       0.8499       0.6148      -0.8078      -0.7972      -0.6381       0.5219       0.6725       0.6158       0.6941       0.6941      -0.0450       0.7744      -0.2637       0.0450      -0.6457       0.0411       0.6315       0.0000       0.0167       0.6700       0.5669       1.0000      -0.8741       0.7268      -0.6388      -0.7072       0.6158      -0.6158      -0.6191       0.6359       0.6464       0.6121
+C                  -0.1290      -0.7275      -0.8008       0.8010      -0.7311      -0.8252      -0.9061       0.2575      -0.4722      -0.0123      -0.2575       0.2941       0.0000      -0.8131      -0.8409      -0.7788      -0.8741       1.0000      -0.9285       0.7990       0.7275      -0.1290      -0.7275      -0.8008       0.8404       0.8402       0.8010      -0.7311      -0.8252      -0.3051      -0.9061      -0.9061       0.2575      -0.4722      -0.0123      -0.2575       0.8130       0.2941      -0.8131       0.0000      -0.0406      -0.8409      -0.7788      -0.8741       1.0000      -0.9285       0.7990       0.8423      -0.3051       0.3051       0.7924      -0.8056      -0.8226      -0.5500
+v                   0.4879       0.7540       0.9580      -0.9529       0.9228       0.9595       0.9968      -0.5175       0.1549       0.3299       0.5175      -0.1638      -0.0000       0.9644       0.9706       0.9488       0.7268      -0.9285       1.0000      -0.9509      -0.7540       0.4879       0.7540       0.9580      -0.9246      -0.9300      -0.9529       0.9228       0.9595      -0.0323       0.9968       0.9968      -0.5175       0.1549       0.3299       0.5175      -0.9596      -0.1638       0.9644      -0.0000      -0.1623       0.9706       0.9488       0.7268      -0.9285       1.0000      -0.9509      -0.9620      -0.0323       0.0323      -0.9491       0.9570       0.9620       0.3671
+varphi             -0.6614      -0.7681      -0.9983       1.0000      -0.9893      -0.9987      -0.9671       0.7078      -0.0099      -0.5289      -0.7078      -0.0254      -0.0000      -0.9975      -0.9970      -0.9935      -0.6388       0.7990      -0.9509       1.0000       0.7681      -0.6614      -0.7681      -0.9983       0.9518       0.9578       1.0000      -0.9893      -0.9987       0.2083      -0.9671      -0.9671       0.7078      -0.0099      -0.5289      -0.7078       0.9995      -0.0254      -0.9975      -0.0000       0.3861      -0.9970      -0.9935      -0.6388       0.7990      -0.9509       1.0000       0.9955       0.2083      -0.2083       0.9994      -0.9996      -0.9980      -0.1379
+VU                 -0.3035      -1.0000      -0.7457       0.7677      -0.6801      -0.7779      -0.7311       0.1957      -0.4618       0.0302      -0.1957      -0.4419       0.0000      -0.7631      -0.7647      -0.6985      -0.8499       0.7275      -0.7540       0.7681       1.0000      -0.3035      -1.0000      -0.7457       0.9238       0.9169       0.7677      -0.6801      -0.7779      -0.3156      -0.7311      -0.7311       0.1957      -0.4618       0.0302      -0.1957       0.7681      -0.4419      -0.7631       0.0000       0.1807      -0.7647      -0.6985      -0.8499       0.7275      -0.7540       0.7681       0.8004      -0.3156       0.3156       0.7456      -0.7645      -0.7458      -0.5458
+Q_hat               1.0000       0.3035       0.6760      -0.6620       0.7458       0.6229       0.5322      -0.7769      -0.6966       0.8524       0.7769       0.2541      -0.0000       0.6645       0.6156       0.7032      -0.1139      -0.1290       0.4879      -0.6614      -0.3035       1.0000       0.3035       0.6760      -0.4935      -0.5088      -0.6620       0.7458       0.6229      -0.8038       0.5322       0.5322      -0.7769      -0.6966       0.8524       0.7769      -0.6518       0.2541       0.6645      -0.0000      -0.5290       0.6156       0.7032      -0.1139      -0.1290       0.4879      -0.6614      -0.5892      -0.8038       0.8038      -0.6720       0.6623       0.6354      -0.3127
+lambda_hat          0.3035       1.0000       0.7457      -0.7677       0.6801       0.7779       0.7311      -0.1957       0.4618      -0.0302       0.1957       0.4419      -0.0000       0.7631       0.7647       0.6985       0.8499      -0.7275       0.7540      -0.7681      -1.0000       0.3035       1.0000       0.7457      -0.9238      -0.9169      -0.7677       0.6801       0.7779       0.3156       0.7311       0.7311      -0.1957       0.4618      -0.0302       0.1957      -0.7681       0.4419       0.7631      -0.0000      -0.1807       0.7647       0.6985       0.8499      -0.7275       0.7540      -0.7681      -0.8004       0.3156      -0.3156      -0.7456       0.7645       0.7458       0.5458
+R_hat               0.6760       0.7457       1.0000      -0.9987       0.9925       0.9961       0.9738      -0.7070      -0.0218       0.5405       0.7070      -0.0083      -0.0000       0.9993       0.9968       0.9976       0.6148      -0.8008       0.9580      -0.9983      -0.7457       0.6760       0.7457       1.0000      -0.9392      -0.9463      -0.9987       0.9925       0.9961      -0.2338       0.9738       0.9738      -0.7070      -0.0218       0.5405       0.7070      -0.9990      -0.0083       0.9993      -0.0000      -0.3654       0.9968       0.9976       0.6148      -0.8008       0.9580      -0.9983      -0.9912      -0.2338       0.2338      -0.9988       0.9993       0.9978       0.1439
+pi                 -0.4935      -0.9238      -0.9392       0.9514      -0.8995      -0.9584      -0.9226       0.5030      -0.2648      -0.2768      -0.5030      -0.1880      -0.0000      -0.9469      -0.9517      -0.9134      -0.8078       0.8404      -0.9246       0.9518       0.9238      -0.4935      -0.9238      -0.9392       1.0000       0.9998       0.9514      -0.8995      -0.9584      -0.0615      -0.9226      -0.9226       0.5030      -0.2648      -0.2768      -0.5030       0.9520      -0.1880      -0.9469      -0.0000       0.3014      -0.9517      -0.9134      -0.8078       0.8404      -0.9246       0.9518       0.9688      -0.0615       0.0615       0.9408      -0.9496      -0.9429      -0.3464
+W_hat              -0.5088      -0.9169      -0.9463       0.9575      -0.9084      -0.9637      -0.9289       0.5153      -0.2459      -0.2933      -0.5153      -0.1788      -0.0000      -0.9536      -0.9575      -0.9218      -0.7972       0.8402      -0.9300       0.9578       0.9169      -0.5088      -0.9169      -0.9463       0.9998       1.0000       0.9575      -0.9084      -0.9637      -0.0424      -0.9289      -0.9289       0.5153      -0.2459      -0.2933      -0.5153       0.9581      -0.1788      -0.9536      -0.0000       0.3046      -0.9575      -0.9218      -0.7972       0.8402      -0.9300       0.9578       0.9731      -0.0424       0.0424       0.9475      -0.9559      -0.9492      -0.3381
+X_hat              -0.6620      -0.7677      -0.9987       1.0000      -0.9894      -0.9986      -0.9687       0.7046      -0.0085      -0.5270      -0.7046      -0.0222      -0.0000      -0.9981      -0.9973      -0.9940      -0.6381       0.8010      -0.9529       1.0000       0.7677      -0.6620      -0.7677      -0.9987       0.9514       0.9575       1.0000      -0.9894      -0.9986       0.2085      -0.9687      -0.9687       0.7046      -0.0085      -0.5270      -0.7046       0.9997      -0.0222      -0.9981      -0.0000       0.3813      -0.9973      -0.9940      -0.6381       0.8010      -0.9529       1.0000       0.9954       0.2085      -0.2085       0.9994      -0.9998      -0.9981      -0.1432
+r_u_hat             0.7458       0.6801       0.9925      -0.9894       1.0000       0.9823       0.9472      -0.7811      -0.1324       0.6387       0.7811      -0.0085      -0.0000       0.9881       0.9817       0.9972       0.5219      -0.7311       0.9228      -0.9893      -0.6801       0.7458       0.6801       0.9925      -0.8995      -0.9084      -0.9894       1.0000       0.9823      -0.3464       0.9472       0.9472      -0.7811      -0.1324       0.6387       0.7811      -0.9878      -0.0085       0.9881      -0.0000      -0.4257       0.9817       0.9972       0.5219      -0.7311       0.9228      -0.9893      -0.9721      -0.3464       0.3464      -0.9930       0.9896       0.9875       0.0333
+r_e_hat             0.6229       0.7779       0.9961      -0.9986       0.9823       1.0000       0.9736      -0.6881       0.0551       0.4966       0.6881       0.0047       0.0000       0.9959       0.9988       0.9896       0.6725      -0.8252       0.9595      -0.9987      -0.7779       0.6229       0.7779       0.9961      -0.9584      -0.9637      -0.9986       0.9823       1.0000      -0.1655       0.9736       0.9736      -0.6881       0.0551       0.4966       0.6881      -0.9989       0.0047       0.9959       0.0000      -0.3673       0.9988       0.9896       0.6725      -0.8252       0.9595      -0.9987      -0.9988      -0.1655       0.1655      -0.9976       0.9983       0.9986       0.1625
+mu_e_hat           -0.8038       0.3156      -0.2338       0.2085      -0.3464      -0.1655      -0.0953       0.7075       0.9641      -0.9030      -0.7075       0.0407       0.0000      -0.2091      -0.1645      -0.2912       0.6158      -0.3051      -0.0323       0.2083      -0.3156      -0.8038       0.3156      -0.2338      -0.0615      -0.0424       0.2085      -0.3464      -0.1655       1.0000      -0.0953      -0.0953       0.7075       0.9641      -0.9030      -0.7075       0.1973       0.0407      -0.2091       0.0000       0.4569      -0.1645      -0.2912       0.6158      -0.3051      -0.0323       0.2083       0.1184       1.0000      -1.0000       0.2338      -0.2096      -0.1980       0.7029
+teta_hat            0.5322       0.7311       0.9738      -0.9687       0.9472       0.9736       1.0000      -0.5839       0.1023       0.4001       0.5839      -0.1662      -0.0000       0.9775       0.9832       0.9685       0.6941      -0.9061       0.9968      -0.9671      -0.7311       0.5322       0.7311       0.9738      -0.9226      -0.9289      -0.9687       0.9472       0.9736      -0.0953       1.0000       1.0000      -0.5839       0.1023       0.4001       0.5839      -0.9741      -0.1662       0.9775      -0.0000      -0.2146       0.9832       0.9685       0.6941      -0.9061       0.9968      -0.9671      -0.9735      -0.0953       0.0953      -0.9672       0.9721       0.9778       0.2921
+phi_cap_hat         0.5322       0.7311       0.9738      -0.9687       0.9472       0.9736       1.0000      -0.5839       0.1023       0.4001       0.5839      -0.1662      -0.0000       0.9775       0.9832       0.9685       0.6941      -0.9061       0.9968      -0.9671      -0.7311       0.5322       0.7311       0.9738      -0.9226      -0.9289      -0.9687       0.9472       0.9736      -0.0953       1.0000       1.0000      -0.5839       0.1023       0.4001       0.5839      -0.9741      -0.1662       0.9775      -0.0000      -0.2146       0.9832       0.9685       0.6941      -0.9061       0.9968      -0.9671      -0.9735      -0.0953       0.0953      -0.9672       0.9721       0.9778       0.2921
+U_hat              -0.7769      -0.1957      -0.7070       0.7046      -0.7811      -0.6881      -0.5839       1.0000       0.4944      -0.9425      -1.0000       0.0641       0.0000      -0.6810      -0.6764      -0.7426      -0.0450       0.2575      -0.5175       0.7078       0.1957      -0.7769      -0.1957      -0.7070       0.5030       0.5153       0.7046      -0.7811      -0.6881       0.7075      -0.5839      -0.5839       1.0000       0.4944      -0.9425      -1.0000       0.6934       0.0641      -0.6810       0.0000       0.6664      -0.6764      -0.7426      -0.0450       0.2575      -0.5175       0.7078       0.6612       0.7075      -0.7075       0.7261      -0.6993      -0.7064       0.5970
+l_b_hat            -0.6966       0.4618      -0.0218      -0.0085      -0.1324       0.0551       0.1023       0.4944       1.0000      -0.7564      -0.4944       0.0260      -0.0000      -0.0011       0.0520      -0.0791       0.7744      -0.4722       0.1549      -0.0099      -0.4618      -0.6966       0.4618      -0.0218      -0.2648      -0.2459      -0.0085      -0.1324       0.0551       0.9641       0.1023       0.1023       0.4944       1.0000      -0.7564      -0.4944      -0.0180       0.0260      -0.0011      -0.0000       0.3115       0.0520      -0.0791       0.7744      -0.4722       0.1549      -0.0099      -0.1029       0.9641      -0.9641       0.0146       0.0051       0.0220       0.6402
+l_g_hat             0.8524      -0.0302       0.5405      -0.5270       0.6387       0.4966       0.4001      -0.9425      -0.7564       1.0000       0.9425      -0.0583      -0.0000       0.5129       0.4890       0.5892      -0.2637      -0.0123       0.3299      -0.5289       0.0302       0.8524      -0.0302       0.5405      -0.2768      -0.2933      -0.5270       0.6387       0.4966      -0.9030       0.4001       0.4001      -0.9425      -0.7564       1.0000       0.9425      -0.5149      -0.0583       0.5129      -0.0000      -0.6212       0.4890       0.5892      -0.2637      -0.0123       0.3299      -0.5289      -0.4580      -0.9030       0.9030      -0.5520       0.5243       0.5232      -0.6954
+empl_hat            0.7769       0.1957       0.7070      -0.7046       0.7811       0.6881       0.5839      -1.0000      -0.4944       0.9425       1.0000      -0.0641      -0.0000       0.6810       0.6764       0.7426       0.0450      -0.2575       0.5175      -0.7078      -0.1957       0.7769       0.1957       0.7070      -0.5030      -0.5153      -0.7046       0.7811       0.6881      -0.7075       0.5839       0.5839      -1.0000      -0.4944       0.9425       1.0000      -0.6934      -0.0641       0.6810      -0.0000      -0.6664       0.6764       0.7426       0.0450      -0.2575       0.5175      -0.7078      -0.6612      -0.7075       0.7075      -0.7261       0.6993       0.7064      -0.5970
+lab_hat            -0.6518      -0.7681      -0.9990       0.9997      -0.9878      -0.9989      -0.9741       0.6934      -0.0180      -0.5149      -0.6934      -0.0071      -0.0000      -0.9989      -0.9985      -0.9940      -0.6457       0.8130      -0.9596       0.9995       0.7681      -0.6518      -0.7681      -0.9990       0.9520       0.9581       0.9997      -0.9878      -0.9989       0.1973      -0.9741      -0.9741       0.6934      -0.0180      -0.5149      -0.6934       1.0000      -0.0071      -0.9989      -0.0000       0.3660      -0.9985      -0.9940      -0.6457       0.8130      -0.9596       0.9995       0.9960       0.1973      -0.1973       0.9989      -0.9999      -0.9987      -0.1599
+mu_hat              0.2541       0.4419      -0.0083      -0.0222      -0.0085       0.0047      -0.1662       0.0641       0.0260      -0.0583      -0.0641       1.0000       0.0000       0.0000      -0.0343      -0.0453       0.0411       0.2941      -0.1638      -0.0254      -0.4419       0.2541       0.4419      -0.0083      -0.1880      -0.1788      -0.0222      -0.0085       0.0047       0.0407      -0.1662      -0.1662       0.0641       0.0260      -0.0583      -0.0641      -0.0071       1.0000       0.0000       0.0000      -0.3047      -0.0343      -0.0453       0.0411       0.2941      -0.1638      -0.0254      -0.0137       0.0407      -0.0407      -0.0026       0.0116      -0.0366       0.0411
+z_hat               0.6645       0.7631       0.9993      -0.9981       0.9881       0.9959       0.9775      -0.6810      -0.0011       0.5129       0.6810       0.0000       0.0000       1.0000       0.9971       0.9950       0.6315      -0.8131       0.9644      -0.9975      -0.7631       0.6645       0.7631       0.9993      -0.9469      -0.9536      -0.9981       0.9881       0.9959      -0.2091       0.9775       0.9775      -0.6810      -0.0011       0.5129       0.6810      -0.9989       0.0000       1.0000       0.0000      -0.3473       0.9971       0.9950       0.6315      -0.8131       0.9644      -0.9975      -0.9921      -0.2091       0.2091      -0.9971       0.9990       0.9966       0.1795
+mps_hat            -0.0000      -0.0000       0.0000      -0.0000      -0.0000       0.0000      -0.0000       0.0000      -0.0000      -0.0000      -0.0000       0.0000       1.0000       0.0000      -0.0000      -0.0000       0.0000       0.0000      -0.0000      -0.0000       0.0000      -0.0000      -0.0000      -0.0000      -0.0000      -0.0000      -0.0000      -0.0000       0.0000       0.0000      -0.0000      -0.0000       0.0000      -0.0000      -0.0000      -0.0000      -0.0000       0.0000       0.0000       1.0000      -0.0000      -0.0000      -0.0000       0.0000       0.0000      -0.0000      -0.0000      -0.0000       0.0000      -0.0000      -0.0000       0.0000      -0.0000       0.0000
+INFL               -0.5290      -0.1807      -0.3654       0.3813      -0.4257      -0.3673      -0.2146       0.6664       0.3115      -0.6212      -0.6664      -0.3047      -0.0000      -0.3473      -0.3403      -0.3806       0.0167      -0.0406      -0.1623       0.3861       0.1807      -0.5290      -0.1807      -0.3654       0.3014       0.3046       0.3813      -0.4257      -0.3673       0.4569      -0.2146      -0.2146       0.6664       0.3115      -0.6212      -0.6664       0.3660      -0.3047      -0.3473      -0.0000       1.0000      -0.3403      -0.3806       0.0167      -0.0406      -0.1623       0.3861       0.3533       0.4569      -0.4569       0.3922      -0.3713      -0.3647       0.5347
+EE_hat              0.6156       0.7647       0.9968      -0.9973       0.9817       0.9988       0.9832      -0.6764       0.0520       0.4890       0.6764      -0.0343      -0.0000       0.9971       1.0000       0.9914       0.6700      -0.8409       0.9706      -0.9970      -0.7647       0.6156       0.7647       0.9968      -0.9517      -0.9575      -0.9973       0.9817       0.9988      -0.1645       0.9832       0.9832      -0.6764       0.0520       0.4890       0.6764      -0.9985      -0.0343       0.9971      -0.0000      -0.3403       1.0000       0.9914       0.6700      -0.8409       0.9706      -0.9970      -0.9972      -0.1645       0.1645      -0.9964       0.9978       0.9991       0.1820
+UE_hat              0.7032       0.6985       0.9976      -0.9940       0.9972       0.9896       0.9685      -0.7426      -0.0791       0.5892       0.7426      -0.0453      -0.0000       0.9950       0.9914       1.0000       0.5669      -0.7788       0.9488      -0.9935      -0.6985       0.7032       0.6985       0.9976      -0.9134      -0.9218      -0.9940       0.9972       0.9896      -0.2912       0.9685       0.9685      -0.7426      -0.0791       0.5892       0.7426      -0.9940      -0.0453       0.9950      -0.0000      -0.3806       0.9914       1.0000       0.5669      -0.7788       0.9488      -0.9935      -0.9817      -0.2912       0.2912      -0.9964       0.9949       0.9946       0.0939
+AC_hat             -0.1139       0.8499       0.6148      -0.6381       0.5219       0.6725       0.6941      -0.0450       0.7744      -0.2637       0.0450       0.0411       0.0000       0.6315       0.6700       0.5669       1.0000      -0.8741       0.7268      -0.6388      -0.8499      -0.1139       0.8499       0.6148      -0.8078      -0.7972      -0.6381       0.5219       0.6725       0.6158       0.6941       0.6941      -0.0450       0.7744      -0.2637       0.0450      -0.6457       0.0411       0.6315       0.0000       0.0167       0.6700       0.5669       1.0000      -0.8741       0.7268      -0.6388      -0.7072       0.6158      -0.6158      -0.6191       0.6359       0.6464       0.6121
+C_hat              -0.1290      -0.7275      -0.8008       0.8010      -0.7311      -0.8252      -0.9061       0.2575      -0.4722      -0.0123      -0.2575       0.2941       0.0000      -0.8131      -0.8409      -0.7788      -0.8741       1.0000      -0.9285       0.7990       0.7275      -0.1290      -0.7275      -0.8008       0.8404       0.8402       0.8010      -0.7311      -0.8252      -0.3051      -0.9061      -0.9061       0.2575      -0.4722      -0.0123      -0.2575       0.8130       0.2941      -0.8131       0.0000      -0.0406      -0.8409      -0.7788      -0.8741       1.0000      -0.9285       0.7990       0.8423      -0.3051       0.3051       0.7924      -0.8056      -0.8226      -0.5500
+v_hat               0.4879       0.7540       0.9580      -0.9529       0.9228       0.9595       0.9968      -0.5175       0.1549       0.3299       0.5175      -0.1638      -0.0000       0.9644       0.9706       0.9488       0.7268      -0.9285       1.0000      -0.9509      -0.7540       0.4879       0.7540       0.9580      -0.9246      -0.9300      -0.9529       0.9228       0.9595      -0.0323       0.9968       0.9968      -0.5175       0.1549       0.3299       0.5175      -0.9596      -0.1638       0.9644      -0.0000      -0.1623       0.9706       0.9488       0.7268      -0.9285       1.0000      -0.9509      -0.9620      -0.0323       0.0323      -0.9491       0.9570       0.9620       0.3671
+varphi_hat         -0.6614      -0.7681      -0.9983       1.0000      -0.9893      -0.9987      -0.9671       0.7078      -0.0099      -0.5289      -0.7078      -0.0254      -0.0000      -0.9975      -0.9970      -0.9935      -0.6388       0.7990      -0.9509       1.0000       0.7681      -0.6614      -0.7681      -0.9983       0.9518       0.9578       1.0000      -0.9893      -0.9987       0.2083      -0.9671      -0.9671       0.7078      -0.0099      -0.5289      -0.7078       0.9995      -0.0254      -0.9975      -0.0000       0.3861      -0.9970      -0.9935      -0.6388       0.7990      -0.9509       1.0000       0.9955       0.2083      -0.2083       0.9994      -0.9996      -0.9980      -0.1379
+WplusLam           -0.5892      -0.8004      -0.9912       0.9954      -0.9721      -0.9988      -0.9735       0.6612      -0.1029      -0.4580      -0.6612      -0.0137      -0.0000      -0.9921      -0.9972      -0.9817      -0.7072       0.8423      -0.9620       0.9955       0.8004      -0.5892      -0.8004      -0.9912       0.9688       0.9731       0.9954      -0.9721      -0.9988       0.1184      -0.9735      -0.9735       0.6612      -0.1029      -0.4580      -0.6612       0.9960      -0.0137      -0.9921      -0.0000       0.3533      -0.9972      -0.9817      -0.7072       0.8423      -0.9620       0.9955       1.0000       0.1184      -0.1184       0.9930      -0.9948      -0.9956      -0.1930
+b_share            -0.8038       0.3156      -0.2338       0.2085      -0.3464      -0.1655      -0.0953       0.7075       0.9641      -0.9030      -0.7075       0.0407       0.0000      -0.2091      -0.1645      -0.2912       0.6158      -0.3051      -0.0323       0.2083      -0.3156      -0.8038       0.3156      -0.2338      -0.0615      -0.0424       0.2085      -0.3464      -0.1655       1.0000      -0.0953      -0.0953       0.7075       0.9641      -0.9030      -0.7075       0.1973       0.0407      -0.2091       0.0000       0.4569      -0.1645      -0.2912       0.6158      -0.3051      -0.0323       0.2083       0.1184       1.0000      -1.0000       0.2338      -0.2096      -0.1980       0.7029
+g_share             0.8038      -0.3156       0.2338      -0.2085       0.3464       0.1655       0.0953      -0.7075      -0.9641       0.9030       0.7075      -0.0407      -0.0000       0.2091       0.1645       0.2912      -0.6158       0.3051       0.0323      -0.2083       0.3156       0.8038      -0.3156       0.2338       0.0615       0.0424      -0.2085       0.3464       0.1655      -1.0000       0.0953       0.0953      -0.7075      -0.9641       0.9030       0.7075      -0.1973      -0.0407       0.2091      -0.0000      -0.4569       0.1645       0.2912      -0.6158       0.3051       0.0323      -0.2083      -0.1184      -1.0000       1.0000      -0.2338       0.2096       0.1980      -0.7029
+H_hat              -0.6720      -0.7456      -0.9988       0.9994      -0.9930      -0.9976      -0.9672       0.7261       0.0146      -0.5520      -0.7261      -0.0026      -0.0000      -0.9971      -0.9964      -0.9964      -0.6191       0.7924      -0.9491       0.9994       0.7456      -0.6720      -0.7456      -0.9988       0.9408       0.9475       0.9994      -0.9930      -0.9976       0.2338      -0.9672      -0.9672       0.7261       0.0146      -0.5520      -0.7261       0.9989      -0.0026      -0.9971      -0.0000       0.3922      -0.9964      -0.9964      -0.6191       0.7924      -0.9491       0.9994       0.9930       0.2338      -0.2338       1.0000      -0.9992      -0.9985      -0.1141
+TFP_hat             0.6623       0.7645       0.9993      -0.9998       0.9896       0.9983       0.9721      -0.6993       0.0051       0.5243       0.6993       0.0116       0.0000       0.9990       0.9978       0.9949       0.6359      -0.8056       0.9570      -0.9996      -0.7645       0.6623       0.7645       0.9993      -0.9496      -0.9559      -0.9998       0.9896       0.9983      -0.2096       0.9721       0.9721      -0.6993       0.0051       0.5243       0.6993      -0.9999       0.0116       0.9990       0.0000      -0.3713       0.9978       0.9949       0.6359      -0.8056       0.9570      -0.9996      -0.9948      -0.2096       0.2096      -0.9992       1.0000       0.9983       0.1522
+EEf_hat             0.6354       0.7458       0.9978      -0.9981       0.9875       0.9986       0.9778      -0.7064       0.0220       0.5232       0.7064      -0.0366      -0.0000       0.9966       0.9991       0.9946       0.6464      -0.8226       0.9620      -0.9980      -0.7458       0.6354       0.7458       0.9978      -0.9429      -0.9492      -0.9981       0.9875       0.9986      -0.1980       0.9778       0.9778      -0.7064       0.0220       0.5232       0.7064      -0.9987      -0.0366       0.9966      -0.0000      -0.3647       0.9991       0.9946       0.6464      -0.8226       0.9620      -0.9980      -0.9956      -0.1980       0.1980      -0.9985       0.9983       1.0000       0.1412
+UEf_hat            -0.3127       0.5458       0.1439      -0.1432       0.0333       0.1625       0.2921       0.5970       0.6402      -0.6954      -0.5970       0.0411       0.0000       0.1795       0.1820       0.0939       0.6121      -0.5500       0.3671      -0.1379      -0.5458      -0.3127       0.5458       0.1439      -0.3464      -0.3381      -0.1432       0.0333       0.1625       0.7029       0.2921       0.2921       0.5970       0.6402      -0.6954      -0.5970      -0.1599       0.0411       0.1795       0.0000       0.5347       0.1820       0.0939       0.6121      -0.5500       0.3671      -0.1379      -0.1930       0.7029      -0.7029      -0.1141       0.1522       0.1412       1.0000
+
+
+
+COEFFICIENTS OF AUTOCORRELATION
+Order                1        2        3        4        5
+Q               0.8096   0.7394   0.7084   0.6871   0.6641
+lambda          0.5797   0.3563   0.2370   0.1712   0.1334
+R               0.5195   0.2689   0.1423   0.0776   0.0441
+X               0.5303   0.2834   0.1515   0.0794   0.0389
+r_u             0.5679   0.3434   0.2242   0.1583   0.1200
+r_e             0.5350   0.2840   0.1457   0.0676   0.0226
+teta            0.4556   0.1938   0.0705   0.0143  -0.0097
+U               0.9184   0.7855   0.6493   0.5281   0.4269
+l_b             0.9853   0.9510   0.9044   0.8507   0.7934
+l_g             0.9603   0.8892   0.8092   0.7303   0.6568
+empl            0.9184   0.7855   0.6493   0.5281   0.4269
+mu              0.9400   0.8836   0.8306   0.7807   0.7339
+mps             0.9300   0.8649   0.8044   0.7481   0.6957
+z               0.4940   0.2440   0.1206   0.0596   0.0294
+EE              0.5162   0.2631   0.1290   0.0566   0.0169
+UE              0.5353   0.2996   0.1788   0.1154   0.0810
+AC              0.7340   0.5518   0.4230   0.3296   0.2605
+C               0.5287   0.2806   0.1504   0.0808   0.0429
+v               0.4227   0.1526   0.0312  -0.0196  -0.0375
+varphi          0.5356   0.2892   0.1561   0.0823   0.0404
+VU              0.5797   0.3563   0.2370   0.1712   0.1334
+Q_hat           0.8096   0.7394   0.7084   0.6871   0.6641
+lambda_hat      0.5797   0.3563   0.2370   0.1712   0.1334
+R_hat           0.5195   0.2689   0.1423   0.0776   0.0441
+pi              0.5147   0.2549   0.1135   0.0352  -0.0084
+W_hat           0.5088   0.2471   0.1065   0.0300  -0.0119
+X_hat           0.5303   0.2834   0.1515   0.0794   0.0389
+r_u_hat         0.5679   0.3434   0.2242   0.1583   0.1200
+r_e_hat         0.5350   0.2840   0.1457   0.0676   0.0226
+mu_e_hat        0.9901   0.9630   0.9229   0.8741   0.8201
+teta_hat        0.4556   0.1938   0.0705   0.0143  -0.0097
+phi_cap_hat     0.4556   0.1938   0.0705   0.0143  -0.0097
+U_hat           0.9184   0.7855   0.6493   0.5281   0.4269
+l_b_hat         0.9853   0.9510   0.9044   0.8507   0.7934
+l_g_hat         0.9603   0.8892   0.8092   0.7303   0.6568
+empl_hat        0.9184   0.7855   0.6493   0.5281   0.4269
+lab_hat         0.5197   0.2705   0.1394   0.0692   0.0309
+mu_hat          0.9400   0.8836   0.8306   0.7807   0.7339
+z_hat           0.4940   0.2440   0.1206   0.0596   0.0294
+mps_hat         0.9300   0.8649   0.8044   0.7481   0.6957
+INFL            0.9639   0.8890   0.7933   0.6867   0.5747
+EE_hat          0.5162   0.2631   0.1290   0.0566   0.0169
+UE_hat          0.5353   0.2996   0.1788   0.1154   0.0810
+AC_hat          0.7340   0.5518   0.4230   0.3296   0.2605
+C_hat           0.5287   0.2806   0.1504   0.0808   0.0429
+v_hat           0.4227   0.1526   0.0312  -0.0196  -0.0375
+varphi_hat      0.5356   0.2892   0.1561   0.0823   0.0404
+WplusLam        0.5331   0.2781   0.1357   0.0543   0.0070
+b_share         0.9901   0.9630   0.9229   0.8741   0.8201
+g_share         0.9901   0.9630   0.9229   0.8741   0.8201
+H_hat           0.5444   0.3018   0.1698   0.0959   0.0533
+TFP_hat         0.5205   0.2729   0.1433   0.0742   0.0366
+EEf_hat         0.5371   0.2897   0.1547   0.0792   0.0359
+UEf_hat         0.6657   0.4650   0.3389   0.2559   0.1987
+[Warning: Some of the parameters have no value (sigma_phi0) when using steady. If these parameters are not initialized in a
+steadystate file or a steady_state_model-block, Dynare may not be able to solve the model. Note that simul,
+perfect_foresight_setup, and perfect_foresight_solver do not automatically call the steady state file.] 
 
 STEADY-STATE RESULTS:
 
-Q                  		 1.04144
-lambda             		 0.895367
+Q                  		 1.34461
+lambda             		 0.523399
 R                  		 0.00502513
-X                  		 0.547277
+X                  		 0.482564
 r_u                		 0.25
-r_e                		 0.0947084
+r_e                		 0.187523
 teta               		 1
 U                  		 0.0499354
 l_b                		 0.182412
 l_g                		 0.767652
 empl               		 0.950065
 mu                 		 1
-phi_0              		 1
 mps                		 1
 z                  		 1
 EE                 		 0.024
 UE                 		 0.25
 AC                 		 0.096
-C                  		 1.03715
-v                  		 1.02176
-varphi             		 0.547277
-VU                 		 13.1826
+C                  		 1.23818
+v                  		 0.56945
+varphi             		 0.482564
+VU                 		 12.6762
 Q_hat              		 0
 lambda_hat         		 0
 R_hat              		 0
@@ -95,13 +1564,14 @@ r_u_hat            		 0
 r_e_hat            		 0
 mu_e_hat           		 0
 teta_hat           		 0
+phi_cap_hat        		 0
 U_hat              		 0
 l_b_hat            		 0
 l_g_hat            		 0
 empl_hat           		 0
+lab_hat            		 0
 mu_hat             		 0
 z_hat              		 0
-phi_0_hat          		 0
 mps_hat            		 0
 INFL               		 0
 EE_hat             		 0
@@ -112,6 +1582,7 @@ v_hat              		 0
 varphi_hat         		 0
 WplusLam           		 0
 b_share            		 0
+g_share            		 0
 H_hat              		 0
 TFP_hat            		 0
 EEf_hat            		 0
@@ -133,7 +1604,7 @@ Equation number 8 : 0 : 8
 Equation number 9 : 0 : 9
 Equation number 10 : 0 : 10
 Equation number 11 : 0 : pi
-Equation number 12 : 0 : 12
+Equation number 12 : 0 : phi_cap_hat
 Equation number 13 : 0 : 13
 Equation number 14 : 0 : 14
 Equation number 15 : 0 : 15
@@ -149,60 +1620,60 @@ Equation number 24 : 0 : v_hat
 Equation number 25 : 0 : varphi_hat
 Equation number 26 : 0 : WplusLam
 Equation number 27 : 0 : b_share
-Equation number 28 : 0 : H_hat
-Equation number 29 : 0 : TFP_hat
-Equation number 30 : 0 : EEf_hat
-Equation number 31 : 0 : UEf_hat
-Equation number 32 : 0 : Q
-Equation number 33 : 0 : lambda
-Equation number 34 : 0 : R
-Equation number 35 : 0 : X
-Equation number 36 : 0 : z
-Equation number 37 : 0 : r_u
-Equation number 38 : 0 : r_e
-Equation number 39 : 0 : mu
-Equation number 40 : 0 : teta
-Equation number 41 : 0 : U
-Equation number 42 : 0 : l_b
-Equation number 43 : 0 : l_g
-Equation number 44 : 0 : phi_0
-Equation number 45 : 0 : mps
-Equation number 46 : 0 : EE
-Equation number 47 : 0 : UE
-Equation number 48 : 0 : AC
-Equation number 49 : 0 : C
-Equation number 50 : 0 : v
-Equation number 51 : 0 : varphi
-Equation number 52 : 0 : empl
-Equation number 53 : 0 : VU
+Equation number 28 : 0 : g_share
+Equation number 29 : 0 : H_hat
+Equation number 30 : 0 : lab_hat
+Equation number 31 : 0 : TFP_hat
+Equation number 32 : 0 : EEf_hat
+Equation number 33 : 0 : UEf_hat
+Equation number 34 : 0 : Q
+Equation number 35 : 0 : lambda
+Equation number 36 : 0 : R
+Equation number 37 : 0 : X
+Equation number 38 : 0 : z
+Equation number 39 : 0 : r_u
+Equation number 40 : 0 : r_e
+Equation number 41 : 0 : mu
+Equation number 42 : 0 : teta
+Equation number 43 : 0 : U
+Equation number 44 : 0 : l_b
+Equation number 45 : 0 : l_g
+Equation number 46 : 0 : mps
+Equation number 47 : 0 : EE
+Equation number 48 : 0 : UE
+Equation number 49 : 0 : AC
+Equation number 50 : 0 : C
+Equation number 51 : 0 : v
+Equation number 52 : 0 : varphi
+Equation number 53 : 0 : empl
+Equation number 54 : 0 : VU
 
 
 
 EIGENVALUES:
          Modulus             Real        Imaginary
 
-        3.78e-17        -3.78e-17                0
-       7.616e-15       -7.616e-15                0
-          0.4533          -0.4533                0
-          0.4587          -0.3897           0.2421
-          0.4587          -0.3897          -0.2421
-          0.4763          -0.2103           0.4273
-          0.4763          -0.2103          -0.4273
+               0                0                0
+               0                0                0
+               0                0                0
+               0                0                0
+               0                0                0
+               0                0                0
+               0                0                0
+               0                0                0
+               0                0                0
+               0                0                0
+               0                0                0
+       3.173e-16       -3.173e-16                0
+         0.01354          0.01354                0
            0.494            0.494                0
-             0.5              0.5                0
-          0.5109          0.05281           0.5082
-          0.5109          0.05281          -0.5082
-          0.5288           0.5288                0
-          0.5775           0.3591           0.4523
-          0.5775           0.3591          -0.4523
-          0.7563           0.7132           0.2516
-          0.7563           0.7132          -0.2516
-          0.9017           0.9017                0
+           0.745            0.745                0
+          0.9026           0.9026                0
             0.93             0.93                0
             0.94             0.94                0
-           1.097            1.091           0.1162
-           1.097            1.091          -0.1162
-           1.417            1.417                0
+           1.013            1.013                0
+           1.031            1.031                0
+           53.81            53.81                0
 
 
 There are 3 eigenvalue(s) larger than 1 in modulus 
@@ -210,95 +1681,1712 @@ for 3 forward-looking variable(s)
 
 The rank condition is verified.
 
-[Warning: Some of the parameters have no value (s_g) when using stoch_simul. If these parameters are not initialized in a
+[Warning: Some of the parameters have no value (sigma_phi0) when using stoch_simul. If these parameters are not initialized in a
 steadystate file or a steady_state_model-block, Dynare may not be able to solve the model. Note that simul,
 perfect_foresight_setup, and perfect_foresight_solver do not automatically call the steady state file.] 
 
 MODEL SUMMARY
 
-  Number of variables:         63
-  Number of stochastic shocks: 4
-  Number of state variables:   19
+  Number of variables:         64
+  Number of stochastic shocks: 3
+  Number of state variables:   18
   Number of jumpers:           3
-  Number of static variables:  42
+  Number of static variables:  44
 
 
 MATRIX OF COVARIANCE OF EXOGENOUS SHOCKS
-Variables      eps_mu   eps_mps     eps_z  eps_phi0
-eps_mu       0.000529  0.000000  0.000000  0.000000
-eps_mps      0.000000  0.000529  0.000000  0.000000
-eps_z        0.000000  0.000000  0.001347  0.000000
-eps_phi0     0.000000  0.000000  0.000000  0.000000
+Variables      eps_mu     eps_z   eps_mps
+eps_mu       0.000100  0.000000  0.000000
+eps_z        0.000000  0.090000  0.000000
+eps_mps      0.000000  0.000000  0.000000
 
 POLICY AND TRANSITION FUNCTIONS
-                                 mps         EEf_hat          EE_hat           U_hat           C_hat         b_share
-Constant                    1.000000               0               0               0               0               0
-R_hat(-1)                          0      -13.970135      -13.515968        8.640932       -1.153105       -0.309868
-mu_e_hat(-1)                       0        0.307091        0.303163       -0.074737        0.000341       -0.020602
-U_hat(-1)                          0        0.424319        0.449205        0.473460       -0.002888        0.078050
-l_b_hat(-1)                        0        0.167182        0.173541        0.120992       -0.009674        0.921917
-mu_hat(-1)                         0       15.181057       14.682277       -9.489722        0.711483        0.360475
-z_hat(-1)                          0       -1.034396       -0.997045        0.710648        0.023891       -0.039801
-phi_0_hat(-1)                      0        0.481816        0.470016       -0.224505        0.001364       -0.006805
-mps_hat(-1)                 0.930000     -112.395792     -108.757816       69.215678       -5.728740       -2.420596
-pi(-2)                             0      -28.738855      -27.809010       17.691126       -1.384799       -0.617297
-pi(-3)                             0      -27.236588      -26.355254       16.768157       -1.333393       -0.585458
-pi(-4)                             0      -25.337954      -24.517939       15.601498       -1.266469       -0.545177
-pi(-5)                             0      -23.027579      -22.282194       14.181607       -1.182361       -0.496107
-pi(-6)                             0      -20.306039      -19.648582       12.508698       -1.079455       -0.438226
-pi(-7)                             0      -17.197326      -16.640331       10.597310       -0.956244       -0.371995
-pi(-8)                             0      -13.759089      -13.313244        8.482579       -0.811395       -0.298568
-pi(-9)                             0      -10.096732       -9.769343        6.228861       -0.643827       -0.220084
-pi(-10)                            0       -6.382889       -6.175715        3.941651       -0.452810       -0.140066
-pi(-11)                            0       -2.884422       -2.790650        1.784098       -0.238082       -0.063979
-pi(-1)                             0      -29.870622      -28.904235       18.386366       -1.422362       -0.641261
-eps_mu                             0      -16.150060      -15.619443       10.095449       -0.756897       -0.383484
-eps_mps                     1.000000     -120.855690     -116.943888       74.425460       -6.159935       -2.602791
-eps_z                              0        2.093920        2.018309       -1.438559       -0.048362        0.080569
-eps_phi0                           0        0.963631        0.940031       -0.449010        0.002729       -0.013611
+                               R_hat           Q_hat           C_hat              pi         lab_hat           W_hat         TFP_hat           U_hat           H_hat         b_share         g_share         EEf_hat         UEf_hat
+R_hat(-1)                   0.013558       -0.003667       -0.004467       -0.000216       -0.015387       -0.015771        0.011721       -0.010619       -0.015945       -0.000032        0.000008        0.020472        0.009037
+mu_e_hat(-1)                0.309253       -0.021051       -0.100602       -0.000578        0.022013       -0.304059       -0.043063       -0.176483        0.012737       -0.019475        0.004628        0.491756        0.150198
+U_hat(-1)                  -0.017841       -0.001055       -0.005291       -0.001055        0.035873       -0.003091       -0.036928        0.777015        0.076713        0.071276       -0.016937       -0.099344        0.702686
+l_b_hat(-1)                -0.309387       -0.042897        0.019699       -0.029209       -0.297577       -0.155034        0.254680        0.279110       -0.282907        0.904657       -0.214968        0.004269       -0.237540
+mu_hat(-1)                 -0.011511        0.133879        0.391895       -0.109298       -0.227417       -1.756710        0.361295        0.584526       -0.196694       -0.008513        0.002023       -1.044611       -0.497469
+z_hat(-1)                   0.078960        0.013331       -0.049748       -0.026374       -1.141252       -0.448862        1.154583       -0.629939       -1.174361       -0.018262        0.004339        1.345261        0.536118
+mps_hat(-1)                -0.002609       -0.004098        0.002702       -0.002280       -0.030165       -0.014621        0.026066        0.031169       -0.028526       -0.002295        0.000545       -0.040972       -0.026527
+eps_mu                      0.012246       -0.142424       -0.416910        0.116275        0.241933        1.868840       -0.384357       -0.621836        0.209249        0.009057       -0.002152        1.111288        0.529222
+eps_z                      -0.159839       -0.026985        0.100704        0.053389        2.310226        0.908627       -2.337212        1.275181        2.377250        0.036967       -0.008784       -2.723200       -1.085259
+eps_mps                    -0.002805       -0.004407        0.002905       -0.002452       -0.032435       -0.015722        0.028028        0.033515       -0.030673       -0.002468        0.000586       -0.044056       -0.028523
 
 
 MOMENTS OF SIMULATED VARIABLES
 VARIABLE              MEAN       STD. DEV.        VARIANCE        SKEWNESS        KURTOSIS
-mps               0.997204        0.058707        0.003447        0.076699       -0.109877
-EEf_hat           0.039749        3.444081       11.861693       -0.061682       -0.022185
-EE_hat            0.034390        3.255407       10.597674       -0.055649       -0.016740
-U_hat            -0.101965        4.877980       23.794687        0.150298       -0.010982
-C_hat             0.006069        0.280731        0.078810       -0.121941       -0.027790
-b_share          -0.012793        0.375883        0.141288        0.170668       -0.019541
+R_hat             0.001285        0.056329        0.003173       -0.018220       -0.063469
+Q_hat             0.001342        0.014791        0.000219       -0.024484        0.058252
+C_hat             0.001782        0.038493        0.001482       -0.022932       -0.076340
+pi               -0.000538        0.019109        0.000365        0.017439       -0.063929
+lab_hat          -0.017993        0.814640        0.663639        0.019037       -0.068237
+W_hat            -0.009166        0.323171        0.104440        0.017822       -0.063405
+TFP_hat           0.019334        0.824387        0.679614       -0.019854       -0.066512
+U_hat            -0.037434        1.032414        1.065880        0.056868       -0.030700
+H_hat            -0.019960        0.853041        0.727679        0.021631       -0.067582
+b_share          -0.010512        0.175565        0.030823        0.020689        0.050442
+g_share           0.002498        0.041718        0.001740       -0.020689        0.050442
+EEf_hat           0.015884        0.973079        0.946883       -0.016487       -0.072695
+UEf_hat          -0.019287        0.699849        0.489788        0.032174       -0.044735
 
 
 CORRELATION OF SIMULATED VARIABLES
-VARIABLE        mps  EEf_hat   EE_hat    U_hat    C_hat  b_share
-mps          1.0000  -0.6664  -0.6337   0.9064  -0.8929   0.4931
-EEf_hat     -0.6664   1.0000   0.9987  -0.7530   0.8531   0.1563
-EE_hat      -0.6337   0.9987   1.0000  -0.7178   0.8253   0.1843
-U_hat        0.9064  -0.7530  -0.7178   1.0000  -0.9804   0.2408
-C_hat       -0.8929   0.8531   0.8253  -0.9804   1.0000  -0.1298
-b_share      0.4931   0.1563   0.1843   0.2408  -0.1298   1.0000
+VARIABLE      R_hat    Q_hat    C_hat       pi  lab_hat    W_hat  TFP_hat    U_hat    H_hat  b_share  g_share  EEf_hat  UEf_hat
+R_hat        1.0000   0.6775  -0.8107  -0.9431  -0.9991  -0.9497   0.9994  -0.7040  -0.9989  -0.2245   0.2245   0.9978   0.1614
+Q_hat        0.6775   1.0000  -0.1472  -0.5003  -0.6538  -0.5151   0.6640  -0.7711  -0.6735  -0.7986   0.7986   0.6377  -0.2906
+C_hat       -0.8107  -0.1472   1.0000   0.8519   0.8226   0.8514  -0.8155   0.2680   0.8026  -0.3048   0.3048  -0.8313  -0.5535
+pi          -0.9431  -0.5003   0.8519   1.0000   0.9550   0.9998  -0.9527   0.5060   0.9442  -0.0623   0.0623  -0.9465  -0.3585
+lab_hat     -0.9991  -0.6538   0.8226   0.9550   1.0000   0.9607  -0.9999   0.6910   0.9989   0.1890  -0.1890  -0.9987  -0.1765
+W_hat       -0.9497  -0.5151   0.8514   0.9998   0.9607   1.0000  -0.9586   0.5178   0.9504  -0.0437   0.0437  -0.9524  -0.3505
+TFP_hat      0.9994   0.6640  -0.8155  -0.9527  -0.9999  -0.9586   1.0000  -0.6967  -0.9992  -0.2011   0.2011   0.9984   0.1692
+U_hat       -0.7040  -0.7711   0.2680   0.5060   0.6910   0.5178  -0.6967   1.0000   0.7235   0.7012  -0.7012  -0.7044   0.5863
+H_hat       -0.9989  -0.6735   0.8026   0.9442   0.9989   0.9504  -0.9992   0.7235   1.0000   0.2251  -0.2251  -0.9986  -0.1312
+b_share     -0.2245  -0.7986  -0.3048  -0.0623   0.1890  -0.0437  -0.2011   0.7012   0.2251   1.0000  -1.0000  -0.1896   0.6969
+g_share      0.2245   0.7986   0.3048   0.0623  -0.1890   0.0437   0.2011  -0.7012  -0.2251  -1.0000   1.0000   0.1896  -0.6969
+EEf_hat      0.9978   0.6377  -0.8313  -0.9465  -0.9987  -0.9524   0.9984  -0.7044  -0.9986  -0.1896   0.1896   1.0000   0.1573
+UEf_hat      0.1614  -0.2906  -0.5535  -0.3585  -0.1765  -0.3505   0.1692   0.5863  -0.1312   0.6969  -0.6969   0.1573   1.0000
 
 
 AUTOCORRELATION OF SIMULATED VARIABLES
-VARIABLE         1       2       3       4       5
-mps         0.9210  0.8486  0.7804  0.7186  0.6601
-EEf_hat     0.5830  0.3535  0.2073  0.1213  0.0590
-EE_hat      0.5552  0.3181  0.1719  0.0899  0.0317
-U_hat       0.9227  0.7925  0.6536  0.5268  0.4187
-C_hat       0.8603  0.7225  0.5901  0.4716  0.3660
-b_share     0.9714  0.9175  0.8537  0.7886  0.7260
+VARIABLE          1        2        3        4        5
+R_hat        0.5058   0.2565   0.1409   0.0705   0.0389
+Q_hat        0.7963   0.7245   0.6970   0.6717   0.6508
+C_hat        0.5168   0.2705   0.1524   0.0797   0.0421
+pi           0.4997   0.2409   0.1097   0.0244  -0.0160
+lab_hat      0.5063   0.2586   0.1385   0.0624   0.0262
+W_hat        0.4939   0.2333   0.1032   0.0197  -0.0190
+TFP_hat      0.5069   0.2607   0.1420   0.0670   0.0315
+U_hat        0.9153   0.7795   0.6416   0.5176   0.4141
+H_hat        0.5310   0.2895   0.1678   0.0883   0.0476
+b_share      0.9896   0.9615   0.9200   0.8695   0.8137
+g_share      0.9896   0.9615   0.9200   0.8695   0.8137
+EEf_hat      0.5244   0.2785   0.1542   0.0734   0.0318
+UEf_hat      0.6533   0.4517   0.3322   0.2448   0.1884
 
 
 
 VARIANCE DECOMPOSITION SIMULATING ONE SHOCK AT A TIME (in percent)
-                     eps_mu           eps_mps             eps_z          eps_phi0  Tot. lin. contr.
-mps                    0.00            100.01              0.00              0.00            100.01
-EEf_hat                3.02             96.92              0.06              0.00            100.00
-EE_hat                 2.83             97.10              0.06              0.00             99.99
-U_hat                  5.71             94.36              0.02              0.00            100.10
-C_hat                  3.15             97.00              0.02              0.00            100.17
-b_share                6.58             93.50              0.01              0.00            100.09
+                     eps_mu             eps_z           eps_mps  Tot. lin. contr.
+R_hat                  0.01             99.99              0.00            100.00
+Q_hat                  6.36             93.30              0.00             99.66
+C_hat                  8.05             91.50              0.00             99.55
+pi                     3.26             97.10              0.00            100.35
+lab_hat                0.00            100.02              0.00            100.03
+W_hat                  2.94             97.39              0.00            100.33
+TFP_hat                0.01            100.02              0.00            100.03
+U_hat                  0.45             99.39              0.00             99.84
+H_hat                  0.00            100.02              0.00            100.02
+b_share                0.39             99.41              0.00             99.80
+g_share                0.39             99.41              0.00             99.80
+EEf_hat                0.12             99.83              0.00             99.96
+UEf_hat                0.28             99.63              0.00             99.91
 Note: numbers do not add up to 100 due to non-zero correlation of simulated shocks in small samples
 
-Total computing time : 0h00m00s
-Note: 31 warning(s) encountered in the preprocessor
+[Warning: Some of the parameters have no value (sigma_phi0) when using stoch_simul. If these parameters are not initialized in a
+steadystate file or a steady_state_model-block, Dynare may not be able to solve the model. Note that simul,
+perfect_foresight_setup, and perfect_foresight_solver do not automatically call the steady state file.] 
+
+MODEL SUMMARY
+
+  Number of variables:         64
+  Number of stochastic shocks: 3
+  Number of state variables:   18
+  Number of jumpers:           3
+  Number of static variables:  44
+
+
+MATRIX OF COVARIANCE OF EXOGENOUS SHOCKS
+Variables      eps_mu     eps_z   eps_mps
+eps_mu       0.000100  0.000000  0.000000
+eps_z        0.000000  0.090000  0.000000
+eps_mps      0.000000  0.000000  0.000000
+
+POLICY AND TRANSITION FUNCTIONS
+                               R_hat           Q_hat           C_hat              pi         lab_hat           W_hat         TFP_hat           U_hat           H_hat         b_share         g_share         EEf_hat         UEf_hat
+R_hat(-1)                   0.013558       -0.003667       -0.004467       -0.000216       -0.015387       -0.015771        0.011721       -0.010619       -0.015945       -0.000032        0.000008        0.020472        0.009037
+mu_e_hat(-1)                0.309253       -0.021051       -0.100602       -0.000578        0.022013       -0.304059       -0.043063       -0.176483        0.012737       -0.019475        0.004628        0.491756        0.150198
+U_hat(-1)                  -0.017841       -0.001055       -0.005291       -0.001055        0.035873       -0.003091       -0.036928        0.777015        0.076713        0.071276       -0.016937       -0.099344        0.702686
+l_b_hat(-1)                -0.309387       -0.042897        0.019699       -0.029209       -0.297577       -0.155034        0.254680        0.279110       -0.282907        0.904657       -0.214968        0.004269       -0.237540
+mu_hat(-1)                 -0.011511        0.133879        0.391895       -0.109298       -0.227417       -1.756710        0.361295        0.584526       -0.196694       -0.008513        0.002023       -1.044611       -0.497469
+z_hat(-1)                   0.078960        0.013331       -0.049748       -0.026374       -1.141252       -0.448862        1.154583       -0.629939       -1.174361       -0.018262        0.004339        1.345261        0.536118
+mps_hat(-1)                -0.002609       -0.004098        0.002702       -0.002280       -0.030165       -0.014621        0.026066        0.031169       -0.028526       -0.002295        0.000545       -0.040972       -0.026527
+eps_mu                      0.012246       -0.142424       -0.416910        0.116275        0.241933        1.868840       -0.384357       -0.621836        0.209249        0.009057       -0.002152        1.111288        0.529222
+eps_z                      -0.159839       -0.026985        0.100704        0.053389        2.310226        0.908627       -2.337212        1.275181        2.377250        0.036967       -0.008784       -2.723200       -1.085259
+eps_mps                    -0.002805       -0.004407        0.002905       -0.002452       -0.032435       -0.015722        0.028028        0.033515       -0.030673       -0.002468        0.000586       -0.044056       -0.028523
+
+
+THEORETICAL MOMENTS
+VARIABLE         MEAN  STD. DEV.   VARIANCE
+R_hat          0.0000     0.0561     0.0031
+Q_hat          0.0000     0.0150     0.0002
+C_hat          0.0000     0.0383     0.0015
+pi             0.0000     0.0191     0.0004
+lab_hat        0.0000     0.8114     0.6584
+W_hat          0.0000     0.3222     0.1038
+TFP_hat        0.0000     0.8213     0.6745
+U_hat          0.0000     1.0415     1.0848
+H_hat          0.0000     0.8503     0.7230
+b_share        0.0000     0.1791     0.0321
+g_share        0.0000     0.0426     0.0018
+EEf_hat        0.0000     0.9691     0.9392
+UEf_hat        0.0000     0.7006     0.4909
+
+
+
+VARIANCE DECOMPOSITION (in percent)
+            eps_mu    eps_z  eps_mps
+R_hat         0.01    99.99     0.00
+Q_hat         6.59    93.41     0.00
+C_hat         8.71    91.29     0.00
+pi            3.55    96.45     0.00
+lab_hat       0.01    99.99     0.00
+W_hat         3.21    96.79     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.49    99.51     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.41    99.59     0.00
+g_share       0.41    99.59     0.00
+EEf_hat       0.13    99.87     0.00
+UEf_hat       0.30    99.70     0.00
+
+CONDITIONAL VARIANCE DECOMPOSITION (in percent)
+Period 1:
+            eps_mu    eps_z  eps_mps
+R_hat         0.00   100.00     0.00
+Q_hat         3.00    97.00     0.00
+C_hat         1.87    98.13     0.00
+pi            0.52    99.48     0.00
+lab_hat       0.00   100.00     0.00
+W_hat         0.47    99.53     0.00
+TFP_hat       0.00   100.00     0.00
+U_hat         0.03    99.97     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.01    99.99     0.00
+g_share       0.01    99.99     0.00
+EEf_hat       0.02    99.98     0.00
+UEf_hat       0.03    99.97     0.00
+Period 2:
+            eps_mu    eps_z  eps_mps
+R_hat         0.00   100.00     0.00
+Q_hat         4.49    95.51     0.00
+C_hat         2.99    97.01     0.00
+pi            0.79    99.21     0.00
+lab_hat       0.00   100.00     0.00
+W_hat         0.71    99.29     0.00
+TFP_hat       0.00   100.00     0.00
+U_hat         0.04    99.96     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.00   100.00     0.00
+g_share       0.00   100.00     0.00
+EEf_hat       0.03    99.97     0.00
+UEf_hat       0.02    99.98     0.00
+Period 3:
+            eps_mu    eps_z  eps_mps
+R_hat         0.00   100.00     0.00
+Q_hat         5.72    94.28     0.00
+C_hat         4.13    95.87     0.00
+pi            1.08    98.92     0.00
+lab_hat       0.00   100.00     0.00
+W_hat         0.96    99.04     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.06    99.94     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.00   100.00     0.00
+g_share       0.00   100.00     0.00
+EEf_hat       0.04    99.96     0.00
+UEf_hat       0.02    99.98     0.00
+Period 4:
+            eps_mu    eps_z  eps_mps
+R_hat         0.00   100.00     0.00
+Q_hat         6.61    93.39     0.00
+C_hat         5.08    94.92     0.00
+pi            1.35    98.65     0.00
+lab_hat       0.00   100.00     0.00
+W_hat         1.21    98.79     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.08    99.92     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.00   100.00     0.00
+g_share       0.00   100.00     0.00
+EEf_hat       0.05    99.95     0.00
+UEf_hat       0.02    99.98     0.00
+Period 5:
+            eps_mu    eps_z  eps_mps
+R_hat         0.00   100.00     0.00
+Q_hat         7.17    92.83     0.00
+C_hat         5.81    94.19     0.00
+pi            1.59    98.41     0.00
+lab_hat       0.00   100.00     0.00
+W_hat         1.43    98.57     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.10    99.90     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.01    99.99     0.00
+g_share       0.01    99.99     0.00
+EEf_hat       0.06    99.94     0.00
+UEf_hat       0.03    99.97     0.00
+Period 6:
+            eps_mu    eps_z  eps_mps
+R_hat         0.00   100.00     0.00
+Q_hat         7.45    92.55     0.00
+C_hat         6.35    93.65     0.00
+pi            1.81    98.19     0.00
+lab_hat       0.00   100.00     0.00
+W_hat         1.62    98.38     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.12    99.88     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.02    99.98     0.00
+g_share       0.02    99.98     0.00
+EEf_hat       0.07    99.93     0.00
+UEf_hat       0.05    99.95     0.00
+Period 7:
+            eps_mu    eps_z  eps_mps
+R_hat         0.00   100.00     0.00
+Q_hat         7.53    92.47     0.00
+C_hat         6.75    93.25     0.00
+pi            2.00    98.00     0.00
+lab_hat       0.00   100.00     0.00
+W_hat         1.79    98.21     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.15    99.85     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.02    99.98     0.00
+g_share       0.02    99.98     0.00
+EEf_hat       0.08    99.92     0.00
+UEf_hat       0.06    99.94     0.00
+Period 8:
+            eps_mu    eps_z  eps_mps
+R_hat         0.00   100.00     0.00
+Q_hat         7.50    92.50     0.00
+C_hat         7.06    92.94     0.00
+pi            2.16    97.84     0.00
+lab_hat       0.00   100.00     0.00
+W_hat         1.94    98.06     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.17    99.83     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.03    99.97     0.00
+g_share       0.03    99.97     0.00
+EEf_hat       0.09    99.91     0.00
+UEf_hat       0.07    99.93     0.00
+Period 9:
+            eps_mu    eps_z  eps_mps
+R_hat         0.00   100.00     0.00
+Q_hat         7.42    92.58     0.00
+C_hat         7.30    92.70     0.00
+pi            2.30    97.70     0.00
+lab_hat       0.00   100.00     0.00
+W_hat         2.07    97.93     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.20    99.80     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.04    99.96     0.00
+g_share       0.04    99.96     0.00
+EEf_hat       0.09    99.91     0.00
+UEf_hat       0.09    99.91     0.00
+Period 10:
+            eps_mu    eps_z  eps_mps
+R_hat         0.00   100.00     0.00
+Q_hat         7.31    92.69     0.00
+C_hat         7.49    92.51     0.00
+pi            2.43    97.57     0.00
+lab_hat       0.00   100.00     0.00
+W_hat         2.19    97.81     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.22    99.78     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.05    99.95     0.00
+g_share       0.05    99.95     0.00
+EEf_hat       0.10    99.90     0.00
+UEf_hat       0.11    99.89     0.00
+Period 11:
+            eps_mu    eps_z  eps_mps
+R_hat         0.00   100.00     0.00
+Q_hat         7.19    92.81     0.00
+C_hat         7.65    92.35     0.00
+pi            2.54    97.46     0.00
+lab_hat       0.00   100.00     0.00
+W_hat         2.29    97.71     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.25    99.75     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.06    99.94     0.00
+g_share       0.06    99.94     0.00
+EEf_hat       0.10    99.90     0.00
+UEf_hat       0.12    99.88     0.00
+Period 12:
+            eps_mu    eps_z  eps_mps
+R_hat         0.00   100.00     0.00
+Q_hat         7.09    92.91     0.00
+C_hat         7.79    92.21     0.00
+pi            2.64    97.36     0.00
+lab_hat       0.00   100.00     0.00
+W_hat         2.38    97.62     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.27    99.73     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.08    99.92     0.00
+g_share       0.08    99.92     0.00
+EEf_hat       0.11    99.89     0.00
+UEf_hat       0.14    99.86     0.00
+Period 13:
+            eps_mu    eps_z  eps_mps
+R_hat         0.01    99.99     0.00
+Q_hat         7.00    93.00     0.00
+C_hat         7.90    92.10     0.00
+pi            2.74    97.26     0.00
+lab_hat       0.00   100.00     0.00
+W_hat         2.47    97.53     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.29    99.71     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.09    99.91     0.00
+g_share       0.09    99.91     0.00
+EEf_hat       0.11    99.89     0.00
+UEf_hat       0.15    99.85     0.00
+Period 14:
+            eps_mu    eps_z  eps_mps
+R_hat         0.01    99.99     0.00
+Q_hat         6.92    93.08     0.00
+C_hat         8.00    92.00     0.00
+pi            2.82    97.18     0.00
+lab_hat       0.00   100.00     0.00
+W_hat         2.54    97.46     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.31    99.69     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.11    99.89     0.00
+g_share       0.11    99.89     0.00
+EEf_hat       0.12    99.88     0.00
+UEf_hat       0.17    99.83     0.00
+Period 15:
+            eps_mu    eps_z  eps_mps
+R_hat         0.01    99.99     0.00
+Q_hat         6.85    93.15     0.00
+C_hat         8.09    91.91     0.00
+pi            2.89    97.11     0.00
+lab_hat       0.00   100.00     0.00
+W_hat         2.61    97.39     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.33    99.67     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.12    99.88     0.00
+g_share       0.12    99.88     0.00
+EEf_hat       0.12    99.88     0.00
+UEf_hat       0.18    99.82     0.00
+Period 16:
+            eps_mu    eps_z  eps_mps
+R_hat         0.01    99.99     0.00
+Q_hat         6.80    93.20     0.00
+C_hat         8.16    91.84     0.00
+pi            2.96    97.04     0.00
+lab_hat       0.00   100.00     0.00
+W_hat         2.67    97.33     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.34    99.66     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.14    99.86     0.00
+g_share       0.14    99.86     0.00
+EEf_hat       0.12    99.88     0.00
+UEf_hat       0.19    99.81     0.00
+Period 17:
+            eps_mu    eps_z  eps_mps
+R_hat         0.01    99.99     0.00
+Q_hat         6.75    93.25     0.00
+C_hat         8.23    91.77     0.00
+pi            3.02    96.98     0.00
+lab_hat       0.00   100.00     0.00
+W_hat         2.73    97.27     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.36    99.64     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.15    99.85     0.00
+g_share       0.15    99.85     0.00
+EEf_hat       0.12    99.88     0.00
+UEf_hat       0.20    99.80     0.00
+Period 18:
+            eps_mu    eps_z  eps_mps
+R_hat         0.01    99.99     0.00
+Q_hat         6.72    93.28     0.00
+C_hat         8.28    91.72     0.00
+pi            3.07    96.93     0.00
+lab_hat       0.00   100.00     0.00
+W_hat         2.78    97.22     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.37    99.63     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.17    99.83     0.00
+g_share       0.17    99.83     0.00
+EEf_hat       0.12    99.88     0.00
+UEf_hat       0.21    99.79     0.00
+Period 19:
+            eps_mu    eps_z  eps_mps
+R_hat         0.01    99.99     0.00
+Q_hat         6.69    93.31     0.00
+C_hat         8.33    91.67     0.00
+pi            3.12    96.88     0.00
+lab_hat       0.00   100.00     0.00
+W_hat         2.82    97.18     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.38    99.62     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.18    99.82     0.00
+g_share       0.18    99.82     0.00
+EEf_hat       0.13    99.87     0.00
+UEf_hat       0.22    99.78     0.00
+Period 20:
+            eps_mu    eps_z  eps_mps
+R_hat         0.01    99.99     0.00
+Q_hat         6.67    93.33     0.00
+C_hat         8.38    91.62     0.00
+pi            3.16    96.84     0.00
+lab_hat       0.00   100.00     0.00
+W_hat         2.86    97.14     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.39    99.61     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.20    99.80     0.00
+g_share       0.20    99.80     0.00
+EEf_hat       0.13    99.87     0.00
+UEf_hat       0.23    99.77     0.00
+Period 21:
+            eps_mu    eps_z  eps_mps
+R_hat         0.01    99.99     0.00
+Q_hat         6.65    93.35     0.00
+C_hat         8.42    91.58     0.00
+pi            3.20    96.80     0.00
+lab_hat       0.00   100.00     0.00
+W_hat         2.90    97.10     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.40    99.60     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.21    99.79     0.00
+g_share       0.21    99.79     0.00
+EEf_hat       0.13    99.87     0.00
+UEf_hat       0.24    99.76     0.00
+Period 22:
+            eps_mu    eps_z  eps_mps
+R_hat         0.01    99.99     0.00
+Q_hat         6.63    93.37     0.00
+C_hat         8.45    91.55     0.00
+pi            3.24    96.76     0.00
+lab_hat       0.00   100.00     0.00
+W_hat         2.93    97.07     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.41    99.59     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.23    99.77     0.00
+g_share       0.23    99.77     0.00
+EEf_hat       0.13    99.87     0.00
+UEf_hat       0.24    99.76     0.00
+Period 23:
+            eps_mu    eps_z  eps_mps
+R_hat         0.01    99.99     0.00
+Q_hat         6.62    93.38     0.00
+C_hat         8.48    91.52     0.00
+pi            3.27    96.73     0.00
+lab_hat       0.00   100.00     0.00
+W_hat         2.96    97.04     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.42    99.58     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.24    99.76     0.00
+g_share       0.24    99.76     0.00
+EEf_hat       0.13    99.87     0.00
+UEf_hat       0.25    99.75     0.00
+Period 24:
+            eps_mu    eps_z  eps_mps
+R_hat         0.01    99.99     0.00
+Q_hat         6.61    93.39     0.00
+C_hat         8.51    91.49     0.00
+pi            3.30    96.70     0.00
+lab_hat       0.00   100.00     0.00
+W_hat         2.99    97.01     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.43    99.57     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.25    99.75     0.00
+g_share       0.25    99.75     0.00
+EEf_hat       0.13    99.87     0.00
+UEf_hat       0.26    99.74     0.00
+Period 25:
+            eps_mu    eps_z  eps_mps
+R_hat         0.01    99.99     0.00
+Q_hat         6.61    93.39     0.00
+C_hat         8.53    91.47     0.00
+pi            3.33    96.67     0.00
+lab_hat       0.00   100.00     0.00
+W_hat         3.01    96.99     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.43    99.57     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.26    99.74     0.00
+g_share       0.26    99.74     0.00
+EEf_hat       0.13    99.87     0.00
+UEf_hat       0.26    99.74     0.00
+Period 26:
+            eps_mu    eps_z  eps_mps
+R_hat         0.01    99.99     0.00
+Q_hat         6.60    93.40     0.00
+C_hat         8.55    91.45     0.00
+pi            3.35    96.65     0.00
+lab_hat       0.00   100.00     0.00
+W_hat         3.03    96.97     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.44    99.56     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.28    99.72     0.00
+g_share       0.28    99.72     0.00
+EEf_hat       0.13    99.87     0.00
+UEf_hat       0.27    99.73     0.00
+Period 27:
+            eps_mu    eps_z  eps_mps
+R_hat         0.01    99.99     0.00
+Q_hat         6.60    93.40     0.00
+C_hat         8.57    91.43     0.00
+pi            3.37    96.63     0.00
+lab_hat       0.00   100.00     0.00
+W_hat         3.05    96.95     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.45    99.55     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.29    99.71     0.00
+g_share       0.29    99.71     0.00
+EEf_hat       0.13    99.87     0.00
+UEf_hat       0.27    99.73     0.00
+Period 28:
+            eps_mu    eps_z  eps_mps
+R_hat         0.01    99.99     0.00
+Q_hat         6.60    93.40     0.00
+C_hat         8.59    91.41     0.00
+pi            3.39    96.61     0.00
+lab_hat       0.00   100.00     0.00
+W_hat         3.07    96.93     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.45    99.55     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.30    99.70     0.00
+g_share       0.30    99.70     0.00
+EEf_hat       0.13    99.87     0.00
+UEf_hat       0.27    99.73     0.00
+Period 29:
+            eps_mu    eps_z  eps_mps
+R_hat         0.01    99.99     0.00
+Q_hat         6.59    93.41     0.00
+C_hat         8.60    91.40     0.00
+pi            3.41    96.59     0.00
+lab_hat       0.00   100.00     0.00
+W_hat         3.08    96.92     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.45    99.55     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.31    99.69     0.00
+g_share       0.31    99.69     0.00
+EEf_hat       0.13    99.87     0.00
+UEf_hat       0.28    99.72     0.00
+Period 30:
+            eps_mu    eps_z  eps_mps
+R_hat         0.01    99.99     0.00
+Q_hat         6.59    93.41     0.00
+C_hat         8.62    91.38     0.00
+pi            3.42    96.58     0.00
+lab_hat       0.00   100.00     0.00
+W_hat         3.10    96.90     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.46    99.54     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.32    99.68     0.00
+g_share       0.32    99.68     0.00
+EEf_hat       0.13    99.87     0.00
+UEf_hat       0.28    99.72     0.00
+Period 31:
+            eps_mu    eps_z  eps_mps
+R_hat         0.01    99.99     0.00
+Q_hat         6.59    93.41     0.00
+C_hat         8.63    91.37     0.00
+pi            3.44    96.56     0.00
+lab_hat       0.00   100.00     0.00
+W_hat         3.11    96.89     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.46    99.54     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.33    99.67     0.00
+g_share       0.33    99.67     0.00
+EEf_hat       0.13    99.87     0.00
+UEf_hat       0.28    99.72     0.00
+Period 32:
+            eps_mu    eps_z  eps_mps
+R_hat         0.01    99.99     0.00
+Q_hat         6.59    93.41     0.00
+C_hat         8.64    91.36     0.00
+pi            3.45    96.55     0.00
+lab_hat       0.00   100.00     0.00
+W_hat         3.12    96.88     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.46    99.54     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.33    99.67     0.00
+g_share       0.33    99.67     0.00
+EEf_hat       0.13    99.87     0.00
+UEf_hat       0.28    99.72     0.00
+Period 33:
+            eps_mu    eps_z  eps_mps
+R_hat         0.01    99.99     0.00
+Q_hat         6.59    93.41     0.00
+C_hat         8.65    91.35     0.00
+pi            3.46    96.54     0.00
+lab_hat       0.00   100.00     0.00
+W_hat         3.13    96.87     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.47    99.53     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.34    99.66     0.00
+g_share       0.34    99.66     0.00
+EEf_hat       0.13    99.87     0.00
+UEf_hat       0.29    99.71     0.00
+Period 34:
+            eps_mu    eps_z  eps_mps
+R_hat         0.01    99.99     0.00
+Q_hat         6.59    93.41     0.00
+C_hat         8.65    91.35     0.00
+pi            3.47    96.53     0.00
+lab_hat       0.01    99.99     0.00
+W_hat         3.14    96.86     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.47    99.53     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.35    99.65     0.00
+g_share       0.35    99.65     0.00
+EEf_hat       0.13    99.87     0.00
+UEf_hat       0.29    99.71     0.00
+Period 35:
+            eps_mu    eps_z  eps_mps
+R_hat         0.01    99.99     0.00
+Q_hat         6.59    93.41     0.00
+C_hat         8.66    91.34     0.00
+pi            3.48    96.52     0.00
+lab_hat       0.01    99.99     0.00
+W_hat         3.15    96.85     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.47    99.53     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.35    99.65     0.00
+g_share       0.35    99.65     0.00
+EEf_hat       0.13    99.87     0.00
+UEf_hat       0.29    99.71     0.00
+Period 36:
+            eps_mu    eps_z  eps_mps
+R_hat         0.01    99.99     0.00
+Q_hat         6.59    93.41     0.00
+C_hat         8.67    91.33     0.00
+pi            3.49    96.51     0.00
+lab_hat       0.01    99.99     0.00
+W_hat         3.16    96.84     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.47    99.53     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.36    99.64     0.00
+g_share       0.36    99.64     0.00
+EEf_hat       0.13    99.87     0.00
+UEf_hat       0.29    99.71     0.00
+Period 37:
+            eps_mu    eps_z  eps_mps
+R_hat         0.01    99.99     0.00
+Q_hat         6.59    93.41     0.00
+C_hat         8.67    91.33     0.00
+pi            3.50    96.50     0.00
+lab_hat       0.01    99.99     0.00
+W_hat         3.16    96.84     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.47    99.53     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.36    99.64     0.00
+g_share       0.36    99.64     0.00
+EEf_hat       0.13    99.87     0.00
+UEf_hat       0.29    99.71     0.00
+Period 38:
+            eps_mu    eps_z  eps_mps
+R_hat         0.01    99.99     0.00
+Q_hat         6.59    93.41     0.00
+C_hat         8.68    91.32     0.00
+pi            3.50    96.50     0.00
+lab_hat       0.01    99.99     0.00
+W_hat         3.17    96.83     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.48    99.52     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.37    99.63     0.00
+g_share       0.37    99.63     0.00
+EEf_hat       0.13    99.87     0.00
+UEf_hat       0.29    99.71     0.00
+Period 39:
+            eps_mu    eps_z  eps_mps
+R_hat         0.01    99.99     0.00
+Q_hat         6.59    93.41     0.00
+C_hat         8.68    91.32     0.00
+pi            3.51    96.49     0.00
+lab_hat       0.01    99.99     0.00
+W_hat         3.17    96.83     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.48    99.52     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.37    99.63     0.00
+g_share       0.37    99.63     0.00
+EEf_hat       0.13    99.87     0.00
+UEf_hat       0.29    99.71     0.00
+Period 40:
+            eps_mu    eps_z  eps_mps
+R_hat         0.01    99.99     0.00
+Q_hat         6.59    93.41     0.00
+C_hat         8.68    91.32     0.00
+pi            3.51    96.49     0.00
+lab_hat       0.01    99.99     0.00
+W_hat         3.18    96.82     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.48    99.52     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.38    99.62     0.00
+g_share       0.38    99.62     0.00
+EEf_hat       0.13    99.87     0.00
+UEf_hat       0.30    99.70     0.00
+Period 41:
+            eps_mu    eps_z  eps_mps
+R_hat         0.01    99.99     0.00
+Q_hat         6.59    93.41     0.00
+C_hat         8.69    91.31     0.00
+pi            3.52    96.48     0.00
+lab_hat       0.01    99.99     0.00
+W_hat         3.18    96.82     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.48    99.52     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.38    99.62     0.00
+g_share       0.38    99.62     0.00
+EEf_hat       0.13    99.87     0.00
+UEf_hat       0.30    99.70     0.00
+Period 42:
+            eps_mu    eps_z  eps_mps
+R_hat         0.01    99.99     0.00
+Q_hat         6.59    93.41     0.00
+C_hat         8.69    91.31     0.00
+pi            3.52    96.48     0.00
+lab_hat       0.01    99.99     0.00
+W_hat         3.18    96.82     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.48    99.52     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.38    99.62     0.00
+g_share       0.38    99.62     0.00
+EEf_hat       0.13    99.87     0.00
+UEf_hat       0.30    99.70     0.00
+Period 43:
+            eps_mu    eps_z  eps_mps
+R_hat         0.01    99.99     0.00
+Q_hat         6.59    93.41     0.00
+C_hat         8.69    91.31     0.00
+pi            3.52    96.48     0.00
+lab_hat       0.01    99.99     0.00
+W_hat         3.19    96.81     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.48    99.52     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.39    99.61     0.00
+g_share       0.39    99.61     0.00
+EEf_hat       0.13    99.87     0.00
+UEf_hat       0.30    99.70     0.00
+Period 44:
+            eps_mu    eps_z  eps_mps
+R_hat         0.01    99.99     0.00
+Q_hat         6.59    93.41     0.00
+C_hat         8.69    91.31     0.00
+pi            3.53    96.47     0.00
+lab_hat       0.01    99.99     0.00
+W_hat         3.19    96.81     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.48    99.52     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.39    99.61     0.00
+g_share       0.39    99.61     0.00
+EEf_hat       0.13    99.87     0.00
+UEf_hat       0.30    99.70     0.00
+Period 45:
+            eps_mu    eps_z  eps_mps
+R_hat         0.01    99.99     0.00
+Q_hat         6.59    93.41     0.00
+C_hat         8.70    91.30     0.00
+pi            3.53    96.47     0.00
+lab_hat       0.01    99.99     0.00
+W_hat         3.19    96.81     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.48    99.52     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.39    99.61     0.00
+g_share       0.39    99.61     0.00
+EEf_hat       0.13    99.87     0.00
+UEf_hat       0.30    99.70     0.00
+Period 46:
+            eps_mu    eps_z  eps_mps
+R_hat         0.01    99.99     0.00
+Q_hat         6.59    93.41     0.00
+C_hat         8.70    91.30     0.00
+pi            3.53    96.47     0.00
+lab_hat       0.01    99.99     0.00
+W_hat         3.19    96.81     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.48    99.52     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.39    99.61     0.00
+g_share       0.39    99.61     0.00
+EEf_hat       0.13    99.87     0.00
+UEf_hat       0.30    99.70     0.00
+Period 47:
+            eps_mu    eps_z  eps_mps
+R_hat         0.01    99.99     0.00
+Q_hat         6.59    93.41     0.00
+C_hat         8.70    91.30     0.00
+pi            3.53    96.47     0.00
+lab_hat       0.01    99.99     0.00
+W_hat         3.20    96.80     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.48    99.52     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.40    99.60     0.00
+g_share       0.40    99.60     0.00
+EEf_hat       0.13    99.87     0.00
+UEf_hat       0.30    99.70     0.00
+Period 48:
+            eps_mu    eps_z  eps_mps
+R_hat         0.01    99.99     0.00
+Q_hat         6.59    93.41     0.00
+C_hat         8.70    91.30     0.00
+pi            3.54    96.46     0.00
+lab_hat       0.01    99.99     0.00
+W_hat         3.20    96.80     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.48    99.52     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.40    99.60     0.00
+g_share       0.40    99.60     0.00
+EEf_hat       0.13    99.87     0.00
+UEf_hat       0.30    99.70     0.00
+Period 49:
+            eps_mu    eps_z  eps_mps
+R_hat         0.01    99.99     0.00
+Q_hat         6.59    93.41     0.00
+C_hat         8.70    91.30     0.00
+pi            3.54    96.46     0.00
+lab_hat       0.01    99.99     0.00
+W_hat         3.20    96.80     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.48    99.52     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.40    99.60     0.00
+g_share       0.40    99.60     0.00
+EEf_hat       0.13    99.87     0.00
+UEf_hat       0.30    99.70     0.00
+Period 50:
+            eps_mu    eps_z  eps_mps
+R_hat         0.01    99.99     0.00
+Q_hat         6.59    93.41     0.00
+C_hat         8.70    91.30     0.00
+pi            3.54    96.46     0.00
+lab_hat       0.01    99.99     0.00
+W_hat         3.20    96.80     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.48    99.52     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.40    99.60     0.00
+g_share       0.40    99.60     0.00
+EEf_hat       0.13    99.87     0.00
+UEf_hat       0.30    99.70     0.00
+Period 51:
+            eps_mu    eps_z  eps_mps
+R_hat         0.01    99.99     0.00
+Q_hat         6.59    93.41     0.00
+C_hat         8.70    91.30     0.00
+pi            3.54    96.46     0.00
+lab_hat       0.01    99.99     0.00
+W_hat         3.20    96.80     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.49    99.51     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.40    99.60     0.00
+g_share       0.40    99.60     0.00
+EEf_hat       0.13    99.87     0.00
+UEf_hat       0.30    99.70     0.00
+Period 52:
+            eps_mu    eps_z  eps_mps
+R_hat         0.01    99.99     0.00
+Q_hat         6.59    93.41     0.00
+C_hat         8.70    91.30     0.00
+pi            3.54    96.46     0.00
+lab_hat       0.01    99.99     0.00
+W_hat         3.20    96.80     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.49    99.51     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.40    99.60     0.00
+g_share       0.40    99.60     0.00
+EEf_hat       0.13    99.87     0.00
+UEf_hat       0.30    99.70     0.00
+Period 53:
+            eps_mu    eps_z  eps_mps
+R_hat         0.01    99.99     0.00
+Q_hat         6.59    93.41     0.00
+C_hat         8.70    91.30     0.00
+pi            3.54    96.46     0.00
+lab_hat       0.01    99.99     0.00
+W_hat         3.20    96.80     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.49    99.51     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.40    99.60     0.00
+g_share       0.40    99.60     0.00
+EEf_hat       0.13    99.87     0.00
+UEf_hat       0.30    99.70     0.00
+Period 54:
+            eps_mu    eps_z  eps_mps
+R_hat         0.01    99.99     0.00
+Q_hat         6.59    93.41     0.00
+C_hat         8.71    91.29     0.00
+pi            3.54    96.46     0.00
+lab_hat       0.01    99.99     0.00
+W_hat         3.21    96.79     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.49    99.51     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.41    99.59     0.00
+g_share       0.41    99.59     0.00
+EEf_hat       0.13    99.87     0.00
+UEf_hat       0.30    99.70     0.00
+Period 55:
+            eps_mu    eps_z  eps_mps
+R_hat         0.01    99.99     0.00
+Q_hat         6.59    93.41     0.00
+C_hat         8.71    91.29     0.00
+pi            3.55    96.45     0.00
+lab_hat       0.01    99.99     0.00
+W_hat         3.21    96.79     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.49    99.51     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.41    99.59     0.00
+g_share       0.41    99.59     0.00
+EEf_hat       0.13    99.87     0.00
+UEf_hat       0.30    99.70     0.00
+Period 56:
+            eps_mu    eps_z  eps_mps
+R_hat         0.01    99.99     0.00
+Q_hat         6.59    93.41     0.00
+C_hat         8.71    91.29     0.00
+pi            3.55    96.45     0.00
+lab_hat       0.01    99.99     0.00
+W_hat         3.21    96.79     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.49    99.51     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.41    99.59     0.00
+g_share       0.41    99.59     0.00
+EEf_hat       0.13    99.87     0.00
+UEf_hat       0.30    99.70     0.00
+Period 57:
+            eps_mu    eps_z  eps_mps
+R_hat         0.01    99.99     0.00
+Q_hat         6.59    93.41     0.00
+C_hat         8.71    91.29     0.00
+pi            3.55    96.45     0.00
+lab_hat       0.01    99.99     0.00
+W_hat         3.21    96.79     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.49    99.51     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.41    99.59     0.00
+g_share       0.41    99.59     0.00
+EEf_hat       0.13    99.87     0.00
+UEf_hat       0.30    99.70     0.00
+Period 58:
+            eps_mu    eps_z  eps_mps
+R_hat         0.01    99.99     0.00
+Q_hat         6.59    93.41     0.00
+C_hat         8.71    91.29     0.00
+pi            3.55    96.45     0.00
+lab_hat       0.01    99.99     0.00
+W_hat         3.21    96.79     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.49    99.51     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.41    99.59     0.00
+g_share       0.41    99.59     0.00
+EEf_hat       0.13    99.87     0.00
+UEf_hat       0.30    99.70     0.00
+Period 59:
+            eps_mu    eps_z  eps_mps
+R_hat         0.01    99.99     0.00
+Q_hat         6.59    93.41     0.00
+C_hat         8.71    91.29     0.00
+pi            3.55    96.45     0.00
+lab_hat       0.01    99.99     0.00
+W_hat         3.21    96.79     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.49    99.51     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.41    99.59     0.00
+g_share       0.41    99.59     0.00
+EEf_hat       0.13    99.87     0.00
+UEf_hat       0.30    99.70     0.00
+Period 60:
+            eps_mu    eps_z  eps_mps
+R_hat         0.01    99.99     0.00
+Q_hat         6.59    93.41     0.00
+C_hat         8.71    91.29     0.00
+pi            3.55    96.45     0.00
+lab_hat       0.01    99.99     0.00
+W_hat         3.21    96.79     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.49    99.51     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.41    99.59     0.00
+g_share       0.41    99.59     0.00
+EEf_hat       0.13    99.87     0.00
+UEf_hat       0.30    99.70     0.00
+Period 61:
+            eps_mu    eps_z  eps_mps
+R_hat         0.01    99.99     0.00
+Q_hat         6.59    93.41     0.00
+C_hat         8.71    91.29     0.00
+pi            3.55    96.45     0.00
+lab_hat       0.01    99.99     0.00
+W_hat         3.21    96.79     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.49    99.51     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.41    99.59     0.00
+g_share       0.41    99.59     0.00
+EEf_hat       0.13    99.87     0.00
+UEf_hat       0.30    99.70     0.00
+Period 62:
+            eps_mu    eps_z  eps_mps
+R_hat         0.01    99.99     0.00
+Q_hat         6.59    93.41     0.00
+C_hat         8.71    91.29     0.00
+pi            3.55    96.45     0.00
+lab_hat       0.01    99.99     0.00
+W_hat         3.21    96.79     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.49    99.51     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.41    99.59     0.00
+g_share       0.41    99.59     0.00
+EEf_hat       0.13    99.87     0.00
+UEf_hat       0.30    99.70     0.00
+Period 63:
+            eps_mu    eps_z  eps_mps
+R_hat         0.01    99.99     0.00
+Q_hat         6.59    93.41     0.00
+C_hat         8.71    91.29     0.00
+pi            3.55    96.45     0.00
+lab_hat       0.01    99.99     0.00
+W_hat         3.21    96.79     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.49    99.51     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.41    99.59     0.00
+g_share       0.41    99.59     0.00
+EEf_hat       0.13    99.87     0.00
+UEf_hat       0.30    99.70     0.00
+Period 64:
+            eps_mu    eps_z  eps_mps
+R_hat         0.01    99.99     0.00
+Q_hat         6.59    93.41     0.00
+C_hat         8.71    91.29     0.00
+pi            3.55    96.45     0.00
+lab_hat       0.01    99.99     0.00
+W_hat         3.21    96.79     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.49    99.51     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.41    99.59     0.00
+g_share       0.41    99.59     0.00
+EEf_hat       0.13    99.87     0.00
+UEf_hat       0.30    99.70     0.00
+Period 65:
+            eps_mu    eps_z  eps_mps
+R_hat         0.01    99.99     0.00
+Q_hat         6.59    93.41     0.00
+C_hat         8.71    91.29     0.00
+pi            3.55    96.45     0.00
+lab_hat       0.01    99.99     0.00
+W_hat         3.21    96.79     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.49    99.51     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.41    99.59     0.00
+g_share       0.41    99.59     0.00
+EEf_hat       0.13    99.87     0.00
+UEf_hat       0.30    99.70     0.00
+Period 66:
+            eps_mu    eps_z  eps_mps
+R_hat         0.01    99.99     0.00
+Q_hat         6.59    93.41     0.00
+C_hat         8.71    91.29     0.00
+pi            3.55    96.45     0.00
+lab_hat       0.01    99.99     0.00
+W_hat         3.21    96.79     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.49    99.51     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.41    99.59     0.00
+g_share       0.41    99.59     0.00
+EEf_hat       0.13    99.87     0.00
+UEf_hat       0.30    99.70     0.00
+Period 67:
+            eps_mu    eps_z  eps_mps
+R_hat         0.01    99.99     0.00
+Q_hat         6.59    93.41     0.00
+C_hat         8.71    91.29     0.00
+pi            3.55    96.45     0.00
+lab_hat       0.01    99.99     0.00
+W_hat         3.21    96.79     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.49    99.51     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.41    99.59     0.00
+g_share       0.41    99.59     0.00
+EEf_hat       0.13    99.87     0.00
+UEf_hat       0.30    99.70     0.00
+Period 68:
+            eps_mu    eps_z  eps_mps
+R_hat         0.01    99.99     0.00
+Q_hat         6.59    93.41     0.00
+C_hat         8.71    91.29     0.00
+pi            3.55    96.45     0.00
+lab_hat       0.01    99.99     0.00
+W_hat         3.21    96.79     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.49    99.51     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.41    99.59     0.00
+g_share       0.41    99.59     0.00
+EEf_hat       0.13    99.87     0.00
+UEf_hat       0.30    99.70     0.00
+Period 69:
+            eps_mu    eps_z  eps_mps
+R_hat         0.01    99.99     0.00
+Q_hat         6.59    93.41     0.00
+C_hat         8.71    91.29     0.00
+pi            3.55    96.45     0.00
+lab_hat       0.01    99.99     0.00
+W_hat         3.21    96.79     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.49    99.51     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.41    99.59     0.00
+g_share       0.41    99.59     0.00
+EEf_hat       0.13    99.87     0.00
+UEf_hat       0.30    99.70     0.00
+Period 70:
+            eps_mu    eps_z  eps_mps
+R_hat         0.01    99.99     0.00
+Q_hat         6.59    93.41     0.00
+C_hat         8.71    91.29     0.00
+pi            3.55    96.45     0.00
+lab_hat       0.01    99.99     0.00
+W_hat         3.21    96.79     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.49    99.51     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.41    99.59     0.00
+g_share       0.41    99.59     0.00
+EEf_hat       0.13    99.87     0.00
+UEf_hat       0.30    99.70     0.00
+Period 71:
+            eps_mu    eps_z  eps_mps
+R_hat         0.01    99.99     0.00
+Q_hat         6.59    93.41     0.00
+C_hat         8.71    91.29     0.00
+pi            3.55    96.45     0.00
+lab_hat       0.01    99.99     0.00
+W_hat         3.21    96.79     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.49    99.51     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.41    99.59     0.00
+g_share       0.41    99.59     0.00
+EEf_hat       0.13    99.87     0.00
+UEf_hat       0.30    99.70     0.00
+Period 72:
+            eps_mu    eps_z  eps_mps
+R_hat         0.01    99.99     0.00
+Q_hat         6.59    93.41     0.00
+C_hat         8.71    91.29     0.00
+pi            3.55    96.45     0.00
+lab_hat       0.01    99.99     0.00
+W_hat         3.21    96.79     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.49    99.51     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.41    99.59     0.00
+g_share       0.41    99.59     0.00
+EEf_hat       0.13    99.87     0.00
+UEf_hat       0.30    99.70     0.00
+Period 73:
+            eps_mu    eps_z  eps_mps
+R_hat         0.01    99.99     0.00
+Q_hat         6.59    93.41     0.00
+C_hat         8.71    91.29     0.00
+pi            3.55    96.45     0.00
+lab_hat       0.01    99.99     0.00
+W_hat         3.21    96.79     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.49    99.51     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.41    99.59     0.00
+g_share       0.41    99.59     0.00
+EEf_hat       0.13    99.87     0.00
+UEf_hat       0.30    99.70     0.00
+Period 74:
+            eps_mu    eps_z  eps_mps
+R_hat         0.01    99.99     0.00
+Q_hat         6.59    93.41     0.00
+C_hat         8.71    91.29     0.00
+pi            3.55    96.45     0.00
+lab_hat       0.01    99.99     0.00
+W_hat         3.21    96.79     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.49    99.51     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.41    99.59     0.00
+g_share       0.41    99.59     0.00
+EEf_hat       0.13    99.87     0.00
+UEf_hat       0.30    99.70     0.00
+Period 75:
+            eps_mu    eps_z  eps_mps
+R_hat         0.01    99.99     0.00
+Q_hat         6.59    93.41     0.00
+C_hat         8.71    91.29     0.00
+pi            3.55    96.45     0.00
+lab_hat       0.01    99.99     0.00
+W_hat         3.21    96.79     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.49    99.51     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.41    99.59     0.00
+g_share       0.41    99.59     0.00
+EEf_hat       0.13    99.87     0.00
+UEf_hat       0.30    99.70     0.00
+Period 76:
+            eps_mu    eps_z  eps_mps
+R_hat         0.01    99.99     0.00
+Q_hat         6.59    93.41     0.00
+C_hat         8.71    91.29     0.00
+pi            3.55    96.45     0.00
+lab_hat       0.01    99.99     0.00
+W_hat         3.21    96.79     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.49    99.51     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.41    99.59     0.00
+g_share       0.41    99.59     0.00
+EEf_hat       0.13    99.87     0.00
+UEf_hat       0.30    99.70     0.00
+Period 77:
+            eps_mu    eps_z  eps_mps
+R_hat         0.01    99.99     0.00
+Q_hat         6.59    93.41     0.00
+C_hat         8.71    91.29     0.00
+pi            3.55    96.45     0.00
+lab_hat       0.01    99.99     0.00
+W_hat         3.21    96.79     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.49    99.51     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.41    99.59     0.00
+g_share       0.41    99.59     0.00
+EEf_hat       0.13    99.87     0.00
+UEf_hat       0.30    99.70     0.00
+Period 78:
+            eps_mu    eps_z  eps_mps
+R_hat         0.01    99.99     0.00
+Q_hat         6.59    93.41     0.00
+C_hat         8.71    91.29     0.00
+pi            3.55    96.45     0.00
+lab_hat       0.01    99.99     0.00
+W_hat         3.21    96.79     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.49    99.51     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.41    99.59     0.00
+g_share       0.41    99.59     0.00
+EEf_hat       0.13    99.87     0.00
+UEf_hat       0.30    99.70     0.00
+Period 79:
+            eps_mu    eps_z  eps_mps
+R_hat         0.01    99.99     0.00
+Q_hat         6.59    93.41     0.00
+C_hat         8.71    91.29     0.00
+pi            3.55    96.45     0.00
+lab_hat       0.01    99.99     0.00
+W_hat         3.21    96.79     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.49    99.51     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.41    99.59     0.00
+g_share       0.41    99.59     0.00
+EEf_hat       0.13    99.87     0.00
+UEf_hat       0.30    99.70     0.00
+Period 80:
+            eps_mu    eps_z  eps_mps
+R_hat         0.01    99.99     0.00
+Q_hat         6.59    93.41     0.00
+C_hat         8.71    91.29     0.00
+pi            3.55    96.45     0.00
+lab_hat       0.01    99.99     0.00
+W_hat         3.21    96.79     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.49    99.51     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.41    99.59     0.00
+g_share       0.41    99.59     0.00
+EEf_hat       0.13    99.87     0.00
+UEf_hat       0.30    99.70     0.00
+Period 81:
+            eps_mu    eps_z  eps_mps
+R_hat         0.01    99.99     0.00
+Q_hat         6.59    93.41     0.00
+C_hat         8.71    91.29     0.00
+pi            3.55    96.45     0.00
+lab_hat       0.01    99.99     0.00
+W_hat         3.21    96.79     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.49    99.51     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.41    99.59     0.00
+g_share       0.41    99.59     0.00
+EEf_hat       0.13    99.87     0.00
+UEf_hat       0.30    99.70     0.00
+Period 82:
+            eps_mu    eps_z  eps_mps
+R_hat         0.01    99.99     0.00
+Q_hat         6.59    93.41     0.00
+C_hat         8.71    91.29     0.00
+pi            3.55    96.45     0.00
+lab_hat       0.01    99.99     0.00
+W_hat         3.21    96.79     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.49    99.51     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.41    99.59     0.00
+g_share       0.41    99.59     0.00
+EEf_hat       0.13    99.87     0.00
+UEf_hat       0.30    99.70     0.00
+Period 83:
+            eps_mu    eps_z  eps_mps
+R_hat         0.01    99.99     0.00
+Q_hat         6.59    93.41     0.00
+C_hat         8.71    91.29     0.00
+pi            3.55    96.45     0.00
+lab_hat       0.01    99.99     0.00
+W_hat         3.21    96.79     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.49    99.51     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.41    99.59     0.00
+g_share       0.41    99.59     0.00
+EEf_hat       0.13    99.87     0.00
+UEf_hat       0.30    99.70     0.00
+Period 84:
+            eps_mu    eps_z  eps_mps
+R_hat         0.01    99.99     0.00
+Q_hat         6.59    93.41     0.00
+C_hat         8.71    91.29     0.00
+pi            3.55    96.45     0.00
+lab_hat       0.01    99.99     0.00
+W_hat         3.21    96.79     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.49    99.51     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.41    99.59     0.00
+g_share       0.41    99.59     0.00
+EEf_hat       0.13    99.87     0.00
+UEf_hat       0.30    99.70     0.00
+Period 85:
+            eps_mu    eps_z  eps_mps
+R_hat         0.01    99.99     0.00
+Q_hat         6.59    93.41     0.00
+C_hat         8.71    91.29     0.00
+pi            3.55    96.45     0.00
+lab_hat       0.01    99.99     0.00
+W_hat         3.21    96.79     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.49    99.51     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.41    99.59     0.00
+g_share       0.41    99.59     0.00
+EEf_hat       0.13    99.87     0.00
+UEf_hat       0.30    99.70     0.00
+Period 86:
+            eps_mu    eps_z  eps_mps
+R_hat         0.01    99.99     0.00
+Q_hat         6.59    93.41     0.00
+C_hat         8.71    91.29     0.00
+pi            3.55    96.45     0.00
+lab_hat       0.01    99.99     0.00
+W_hat         3.21    96.79     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.49    99.51     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.41    99.59     0.00
+g_share       0.41    99.59     0.00
+EEf_hat       0.13    99.87     0.00
+UEf_hat       0.30    99.70     0.00
+Period 87:
+            eps_mu    eps_z  eps_mps
+R_hat         0.01    99.99     0.00
+Q_hat         6.59    93.41     0.00
+C_hat         8.71    91.29     0.00
+pi            3.55    96.45     0.00
+lab_hat       0.01    99.99     0.00
+W_hat         3.21    96.79     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.49    99.51     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.41    99.59     0.00
+g_share       0.41    99.59     0.00
+EEf_hat       0.13    99.87     0.00
+UEf_hat       0.30    99.70     0.00
+Period 88:
+            eps_mu    eps_z  eps_mps
+R_hat         0.01    99.99     0.00
+Q_hat         6.59    93.41     0.00
+C_hat         8.71    91.29     0.00
+pi            3.55    96.45     0.00
+lab_hat       0.01    99.99     0.00
+W_hat         3.21    96.79     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.49    99.51     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.41    99.59     0.00
+g_share       0.41    99.59     0.00
+EEf_hat       0.13    99.87     0.00
+UEf_hat       0.30    99.70     0.00
+Period 89:
+            eps_mu    eps_z  eps_mps
+R_hat         0.01    99.99     0.00
+Q_hat         6.59    93.41     0.00
+C_hat         8.71    91.29     0.00
+pi            3.55    96.45     0.00
+lab_hat       0.01    99.99     0.00
+W_hat         3.21    96.79     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.49    99.51     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.41    99.59     0.00
+g_share       0.41    99.59     0.00
+EEf_hat       0.13    99.87     0.00
+UEf_hat       0.30    99.70     0.00
+Period 90:
+            eps_mu    eps_z  eps_mps
+R_hat         0.01    99.99     0.00
+Q_hat         6.59    93.41     0.00
+C_hat         8.71    91.29     0.00
+pi            3.55    96.45     0.00
+lab_hat       0.01    99.99     0.00
+W_hat         3.21    96.79     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.49    99.51     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.41    99.59     0.00
+g_share       0.41    99.59     0.00
+EEf_hat       0.13    99.87     0.00
+UEf_hat       0.30    99.70     0.00
+Period 91:
+            eps_mu    eps_z  eps_mps
+R_hat         0.01    99.99     0.00
+Q_hat         6.59    93.41     0.00
+C_hat         8.71    91.29     0.00
+pi            3.55    96.45     0.00
+lab_hat       0.01    99.99     0.00
+W_hat         3.21    96.79     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.49    99.51     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.41    99.59     0.00
+g_share       0.41    99.59     0.00
+EEf_hat       0.13    99.87     0.00
+UEf_hat       0.30    99.70     0.00
+Period 92:
+            eps_mu    eps_z  eps_mps
+R_hat         0.01    99.99     0.00
+Q_hat         6.59    93.41     0.00
+C_hat         8.71    91.29     0.00
+pi            3.55    96.45     0.00
+lab_hat       0.01    99.99     0.00
+W_hat         3.21    96.79     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.49    99.51     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.41    99.59     0.00
+g_share       0.41    99.59     0.00
+EEf_hat       0.13    99.87     0.00
+UEf_hat       0.30    99.70     0.00
+Period 93:
+            eps_mu    eps_z  eps_mps
+R_hat         0.01    99.99     0.00
+Q_hat         6.59    93.41     0.00
+C_hat         8.71    91.29     0.00
+pi            3.55    96.45     0.00
+lab_hat       0.01    99.99     0.00
+W_hat         3.21    96.79     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.49    99.51     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.41    99.59     0.00
+g_share       0.41    99.59     0.00
+EEf_hat       0.13    99.87     0.00
+UEf_hat       0.30    99.70     0.00
+Period 94:
+            eps_mu    eps_z  eps_mps
+R_hat         0.01    99.99     0.00
+Q_hat         6.59    93.41     0.00
+C_hat         8.71    91.29     0.00
+pi            3.55    96.45     0.00
+lab_hat       0.01    99.99     0.00
+W_hat         3.21    96.79     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.49    99.51     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.41    99.59     0.00
+g_share       0.41    99.59     0.00
+EEf_hat       0.13    99.87     0.00
+UEf_hat       0.30    99.70     0.00
+Period 95:
+            eps_mu    eps_z  eps_mps
+R_hat         0.01    99.99     0.00
+Q_hat         6.59    93.41     0.00
+C_hat         8.71    91.29     0.00
+pi            3.55    96.45     0.00
+lab_hat       0.01    99.99     0.00
+W_hat         3.21    96.79     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.49    99.51     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.41    99.59     0.00
+g_share       0.41    99.59     0.00
+EEf_hat       0.13    99.87     0.00
+UEf_hat       0.30    99.70     0.00
+Period 96:
+            eps_mu    eps_z  eps_mps
+R_hat         0.01    99.99     0.00
+Q_hat         6.59    93.41     0.00
+C_hat         8.71    91.29     0.00
+pi            3.55    96.45     0.00
+lab_hat       0.01    99.99     0.00
+W_hat         3.21    96.79     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.49    99.51     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.41    99.59     0.00
+g_share       0.41    99.59     0.00
+EEf_hat       0.13    99.87     0.00
+UEf_hat       0.30    99.70     0.00
+Period 97:
+            eps_mu    eps_z  eps_mps
+R_hat         0.01    99.99     0.00
+Q_hat         6.59    93.41     0.00
+C_hat         8.71    91.29     0.00
+pi            3.55    96.45     0.00
+lab_hat       0.01    99.99     0.00
+W_hat         3.21    96.79     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.49    99.51     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.41    99.59     0.00
+g_share       0.41    99.59     0.00
+EEf_hat       0.13    99.87     0.00
+UEf_hat       0.30    99.70     0.00
+Period 98:
+            eps_mu    eps_z  eps_mps
+R_hat         0.01    99.99     0.00
+Q_hat         6.59    93.41     0.00
+C_hat         8.71    91.29     0.00
+pi            3.55    96.45     0.00
+lab_hat       0.01    99.99     0.00
+W_hat         3.21    96.79     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.49    99.51     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.41    99.59     0.00
+g_share       0.41    99.59     0.00
+EEf_hat       0.13    99.87     0.00
+UEf_hat       0.30    99.70     0.00
+Period 99:
+            eps_mu    eps_z  eps_mps
+R_hat         0.01    99.99     0.00
+Q_hat         6.59    93.41     0.00
+C_hat         8.71    91.29     0.00
+pi            3.55    96.45     0.00
+lab_hat       0.01    99.99     0.00
+W_hat         3.21    96.79     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.49    99.51     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.41    99.59     0.00
+g_share       0.41    99.59     0.00
+EEf_hat       0.13    99.87     0.00
+UEf_hat       0.30    99.70     0.00
+Period 100:
+            eps_mu    eps_z  eps_mps
+R_hat         0.01    99.99     0.00
+Q_hat         6.59    93.41     0.00
+C_hat         8.71    91.29     0.00
+pi            3.55    96.45     0.00
+lab_hat       0.01    99.99     0.00
+W_hat         3.21    96.79     0.00
+TFP_hat       0.01    99.99     0.00
+U_hat         0.49    99.51     0.00
+H_hat         0.00   100.00     0.00
+b_share       0.41    99.59     0.00
+g_share       0.41    99.59     0.00
+EEf_hat       0.13    99.87     0.00
+UEf_hat       0.30    99.70     0.00
+
+
+
+MATRIX OF CORRELATIONS
+Variables      R_hat    Q_hat    C_hat       pi  lab_hat    W_hat  TFP_hat    U_hat    H_hat  b_share  g_share  EEf_hat  UEf_hat
+R_hat         1.0000   0.6760  -0.8008  -0.9392  -0.9990  -0.9463   0.9993  -0.7070  -0.9988  -0.2338   0.2338   0.9978   0.1439
+Q_hat         0.6760   1.0000  -0.1290  -0.4935  -0.6518  -0.5088   0.6623  -0.7769  -0.6720  -0.8038   0.8038   0.6354  -0.3127
+C_hat        -0.8008  -0.1290   1.0000   0.8404   0.8130   0.8402  -0.8056   0.2575   0.7924  -0.3051   0.3051  -0.8226  -0.5500
+pi           -0.9392  -0.4935   0.8404   1.0000   0.9520   0.9998  -0.9496   0.5030   0.9408  -0.0615   0.0615  -0.9429  -0.3464
+lab_hat      -0.9990  -0.6518   0.8130   0.9520   1.0000   0.9581  -0.9999   0.6934   0.9989   0.1973  -0.1973  -0.9987  -0.1599
+W_hat        -0.9463  -0.5088   0.8402   0.9998   0.9581   1.0000  -0.9559   0.5153   0.9475  -0.0424   0.0424  -0.9492  -0.3381
+TFP_hat       0.9993   0.6623  -0.8056  -0.9496  -0.9999  -0.9559   1.0000  -0.6993  -0.9992  -0.2096   0.2096   0.9983   0.1522
+U_hat        -0.7070  -0.7769   0.2575   0.5030   0.6934   0.5153  -0.6993   1.0000   0.7261   0.7075  -0.7075  -0.7064   0.5970
+H_hat        -0.9988  -0.6720   0.7924   0.9408   0.9989   0.9475  -0.9992   0.7261   1.0000   0.2338  -0.2338  -0.9985  -0.1141
+b_share      -0.2338  -0.8038  -0.3051  -0.0615   0.1973  -0.0424  -0.2096   0.7075   0.2338   1.0000  -1.0000  -0.1980   0.7029
+g_share       0.2338   0.8038   0.3051   0.0615  -0.1973   0.0424   0.2096  -0.7075  -0.2338  -1.0000   1.0000   0.1980  -0.7029
+EEf_hat       0.9978   0.6354  -0.8226  -0.9429  -0.9987  -0.9492   0.9983  -0.7064  -0.9985  -0.1980   0.1980   1.0000   0.1412
+UEf_hat       0.1439  -0.3127  -0.5500  -0.3464  -0.1599  -0.3381   0.1522   0.5970  -0.1141   0.7029  -0.7029   0.1412   1.0000
+
+
+
+COEFFICIENTS OF AUTOCORRELATION
+Order            1        2        3        4        5
+R_hat       0.5195   0.2689   0.1423   0.0776   0.0441
+Q_hat       0.8096   0.7394   0.7084   0.6871   0.6641
+C_hat       0.5287   0.2806   0.1504   0.0808   0.0429
+pi          0.5147   0.2549   0.1135   0.0352  -0.0084
+lab_hat     0.5197   0.2705   0.1394   0.0692   0.0309
+W_hat       0.5088   0.2471   0.1065   0.0300  -0.0119
+TFP_hat     0.5205   0.2729   0.1433   0.0742   0.0366
+U_hat       0.9184   0.7855   0.6493   0.5281   0.4269
+H_hat       0.5444   0.3018   0.1698   0.0959   0.0533
+b_share     0.9901   0.9630   0.9229   0.8741   0.8201
+g_share     0.9901   0.9630   0.9229   0.8741   0.8201
+EEf_hat     0.5371   0.2897   0.1547   0.0792   0.0359
+UEf_hat     0.6657   0.4650   0.3389   0.2559   0.1987
+Total computing time : 0h00m50s
+Note: 33 warning(s) encountered in the preprocessor
 Note: warning(s) encountered in MATLAB/Octave code
