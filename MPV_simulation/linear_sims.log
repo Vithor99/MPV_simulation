@@ -3387,6 +3387,6 @@ b_share     0.9901   0.9630   0.9229   0.8741   0.8201
 g_share     0.9901   0.9630   0.9229   0.8741   0.8201
 EEf_hat     0.5371   0.2897   0.1547   0.0792   0.0359
 UEf_hat     0.6657   0.4650   0.3389   0.2559   0.1987
-Total computing time : 0h00m50s
+Total computing time : 0h00m53s
 Note: 33 warning(s) encountered in the preprocessor
 Note: warning(s) encountered in MATLAB/Octave code

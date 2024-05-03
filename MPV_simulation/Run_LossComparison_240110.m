@@ -25,7 +25,7 @@ Loss function using Unemployment (U)
 %}
 %% Inital settings
 
-Loss_Q = 0; %if 1: Loss function is computed using Output; if 0: Loss function is computed using Unemployment
+Loss_Q = 1; %if 1: Loss function is computed using Output; if 0: Loss function is computed using Unemployment
 Q_Rule = 1;
 U_Rule = 1;
 
